@@ -1,0 +1,113 @@
+# Smaran Raut SEO Website — Apache Configuration
+# https://smaranraut.com.np/.htaccess
+# Compatible: Apache 2.4+ with mod_rewrite, mod_headers, mod_deflate enabled
+
+# ── Directory security ────────────────────────────────────────────────────────
+Options -Indexes
+Options -MultiViews
+
+# Block direct access to sensitive files
+<FilesMatch "(\.env|\.git|composer\.json|package\.json|server\.py|README\.md)$">
+    Require all denied
+</FilesMatch>
+
+# ── Rewrite engine ────────────────────────────────────────────────────────────
+RewriteEngine On
+
+# 1. Force HTTPS (301 permanent redirect)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# 2. Remove www (canonical non-www)
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# 3. Enforce trailing slash on directories (avoid duplicate content)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ /%1/ [L,R=301]
+
+# 4. Serve pre-rendered index.html from route directories
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.+?)/?$ $1/index.html [L]
+
+# 5. Root index fallback
+RewriteRule ^$ /index.html [L]
+
+# ── Cache control ─────────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+
+    # Static assets — 1 year immutable (use ?v= query string to bust)
+    <FilesMatch "\.(css|js|mjs|woff2|woff|ttf|otf|eot)$">
+        Header set Cache-Control "max-age=31536000, public, immutable"
+    </FilesMatch>
+
+    # Images — 1 year
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|avif|svg|ico)$">
+        Header set Cache-Control "max-age=31536000, public, immutable"
+    </FilesMatch>
+
+    # HTML — no cache (pages update frequently)
+    <FilesMatch "\.html$">
+        Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+
+    # Sitemap and robots.txt — recheck weekly
+    <FilesMatch "(sitemap\.xml|robots\.txt)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+
+</IfModule>
+
+# ── Compression (Gzip / Deflate) ──────────────────────────────────────────────
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE font/woff2
+    AddOutputFilterByType DEFLATE font/woff
+</IfModule>
+
+# ── Security headers ──────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+
+    # Prevent MIME-type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Clickjacking protection
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # Referrer policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Permissions policy (disable unused browser features)
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(self), interest-cohort=()"
+
+    # Content Security Policy
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-src https://www.google.com https://maps.google.com; upgrade-insecure-requests"
+
+    # HSTS — only enable after SSL is confirmed working (1 year)
+    # Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+</IfModule>
+
+# ── Custom error pages ────────────────────────────────────────────────────────
+ErrorDocument 404 /404/index.html
+ErrorDocument 500 /500/index.html
+
+# ── MIME types for modern formats ─────────────────────────────────────────────
+<IfModule mod_mime.c>
+    AddType image/webp          .webp
+    AddType image/avif          .avif
+    AddType font/woff2          .woff2
+    AddType application/json    .json
+    AddType application/manifest+json .webmanifest
+</IfModule>

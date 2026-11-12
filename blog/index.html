@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEO & Technical Web Architecture Knowledge Hub | Smaran Raut</title>
+  <meta name="description" content="Explore 28+ exhaustive technical guides on Local SEO in Itahari, Next.js web development, Core Web Vitals, Google Knowledge Graph, and e-commerce growth.">
+  <link rel="canonical" href="https://smaranraut.com.np/blog/">
+  <meta name="robots" content="index, follow">
+  <!-- Critical Layout Fallback -->
+  <style>
+    :root {
+      --primary-dark: #0A1628;
+      --accent-teal: #00C2CB;
+      --primary-dark: #1A1F1D;
+      --accent-teal: #245037;
+      --accent-gold: #8F6B38;
+      --text-slate: #38403C;
+      --bg-light: #FAF8F5;
+    }
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-slate);
+    }
+    .mobile-nav-drawer, .modal-backdrop {
+      display: none !important;
+    }
+    .modal-backdrop.active, .mobile-nav-drawer.active {
+      display: flex !important;
+    }
+  </style>
+
+  <!-- Dual-Compatible Stylesheets -->
+  <link rel="stylesheet" href="../css/styles.css?v=2026_v3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smaranraut.com.np/" },
+          { "@type": "ListItem", "position": 2, "name": "Knowledge Hub", "item": "https://smaranraut.com.np/blog/" }
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "name": "SEO & Web Architecture Knowledge Hub",
+        "url": "https://smaranraut.com.np/blog/",
+        "description": "Exhaustive technical library covering semantic entity modeling, Core Web Vitals engineering, and local search dominance."
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../index.html" class="brand-logo" aria-label="Smaran Raut Home">
+        <div class="logo-icon">SR</div>
+        <div class="brand-text">
+          <span class="brand-name">Smaran Raut</span>
+          <span class="brand-subtitle">SEO &amp; Web Development</span>
+        </div>
+      </a>
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="../index.html" class="nav-link">Home</a>
+        
+        <!-- Services Dropdown -->
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Services <span class="dropdown-arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-header">
+              <span class="dropdown-section-title">Core Services</span>
+            </div>
+            <a href="../services/index.html" class="dropdown-item featured">
+              <span class="item-title">All Services Overview &rarr;</span>
+              <span class="item-desc">Browse our complete service offering</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="../services/seo-optimized-web-development/index.html" class="dropdown-item">
+              <span class="item-title">SEO-Optimized Web Development</span>
+              <span class="item-desc">Clean, fast business websites built for search</span>
+            </a>
+            <a href="../services/local-seo-itahari/index.html" class="dropdown-item">
+              <span class="item-title">Local SEO & Google Maps</span>
+              <span class="item-desc">Rank locally in Itahari, Dharan & Biratnagar</span>
+            </a>
+            <a href="../services/technical-seo-audit/index.html" class="dropdown-item">
+              <span class="item-title">SEO for Existing Websites</span>
+              <span class="item-desc">Diagnostic audits and search ranking fixes</span>
+            </a>
+            <a href="../services/core-web-vitals-speed/index.html" class="dropdown-item">
+              <span class="item-title">Website Maintenance & Speed</span>
+              <span class="item-desc">Mobile optimization and ongoing technical care</span>
+            </a>
+            <a href="../services/ecommerce-seo-nepal/index.html" class="dropdown-item">
+              <span class="item-title">E-Commerce SEO Nepal</span>
+              <span class="item-desc">Product structured data and store visibility</span>
+            </a>
+            <a href="../services/enterprise-link-building/index.html" class="dropdown-item">
+              <span class="item-title">Ongoing Website Management</span>
+              <span class="item-desc">Monthly search tracking and site management</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Knowledge Hub Dropdown -->
+        <div class="nav-dropdown active">
+          <button class="dropdown-toggle" aria-expanded="true" aria-haspopup="true">
+            Knowledge Hub <span class="dropdown-arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-header">
+              <span class="dropdown-section-title">Educational Guides</span>
+            </div>
+            <a href="index.html" class="dropdown-item featured">
+              <span class="item-title">Knowledge Hub Directory &rarr;</span>
+              <span class="item-desc">Explore all 28 in-depth SEO guides</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="google-business-profile-optimization-nepal/index.html" class="dropdown-item">
+              <span class="item-title">Google Maps & Local SEO</span>
+              <span class="item-desc">Profile optimization & citations in Nepal</span>
+            </a>
+            <a href="nextjs-vs-wordpress-for-seo/index.html" class="dropdown-item">
+              <span class="item-title">Web Development & Speed</span>
+              <span class="item-desc">Framework comparisons & mobile performance</span>
+            </a>
+            <a href="schema-markup-implementation-guide/index.html" class="dropdown-item">
+              <span class="item-title">Technical Audits & Schema</span>
+              <span class="item-desc">Structured data and indexation fixes</span>
+            </a>
+            <a href="topical-authority-clustering-framework/index.html" class="dropdown-item">
+              <span class="item-title">Content & Link Strategy</span>
+              <span class="item-desc">Topical clusters and natural link acquisition</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="../case-studies/index.html" class="nav-link">Case Studies</a>
+        <a href="../about-us/index.html" class="nav-link">About</a>
+        <a href="../contact-us/index.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-cta-group">
+        <button class="btn btn-primary btn-consultation" data-modal="consultation">Book Consultation</button>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation" style="display: none;">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="logo-icon">SR</div>
+        <div class="brand-text">
+          <span class="brand-name">Smaran Raut</span>
+          <span class="brand-subtitle">SEO &amp; Web Development</span>
+        </div>
+      </div>
+      <button class="modal-close-btn" id="mobile-menu-close" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="../index.html">Home</a></li>
+      
+      <!-- Mobile Services Dropdown -->
+      <li class="mobile-dropdown-item">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>Services</span>
+          <span class="mobile-arrow">&#9662;</span>
+        </button>
+        <ul class="mobile-submenu" style="display: none;">
+          <li><a href="../services/index.html"><strong>Services Overview &rarr;</strong></a></li>
+          <li><a href="../services/seo-optimized-web-development/index.html">SEO Web Development</a></li>
+          <li><a href="../services/local-seo-itahari/index.html">Local SEO Itahari & Maps</a></li>
+          <li><a href="../services/technical-seo-audit/index.html">SEO for Existing Websites</a></li>
+          <li><a href="../services/core-web-vitals-speed/index.html">Maintenance & Speed</a></li>
+          <li><a href="../services/ecommerce-seo-nepal/index.html">E-Commerce SEO Nepal</a></li>
+          <li><a href="../services/enterprise-link-building/index.html">Ongoing Website Management</a></li>
+        </ul>
+      </li>
+
+      <!-- Mobile Knowledge Hub Dropdown -->
+      <li class="mobile-dropdown-item active">
+        <button class="mobile-dropdown-toggle" aria-expanded="true">
+          <span>Knowledge Hub</span>
+          <span class="mobile-arrow">&#9662;</span>
+        </button>
+        <ul class="mobile-submenu" style="display: flex;">
+          <li><a href="index.html"><strong>Knowledge Hub Directory &rarr;</strong></a></li>
+          <li><a href="google-business-profile-optimization-nepal/index.html">Google Maps & Local SEO</a></li>
+          <li><a href="nextjs-vs-wordpress-for-seo/index.html">Web Development & Speed</a></li>
+          <li><a href="schema-markup-implementation-guide/index.html">Technical SEO & Schema</a></li>
+          <li><a href="topical-authority-clustering-framework/index.html">Content & Link Strategy</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../case-studies/index.html">Case Studies</a></li>
+      <li><a href="../about-us/index.html">About Smaran Raut</a></li>
+      <li><a href="../office-location/index.html">Office Location</a></li>
+      <li><a href="../contact-us/index.html">Contact</a></li>
+    </ul>
+    <div style="padding: 1.5rem 0;">
+      <button class="btn btn-primary btn-consultation" data-modal="consultation" style="width: 100%;">Book Consultation</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="hero-section" style="padding: 3.5rem 0;">
+      <div class="container">
+        <div class="breadcrumbs" style="color: #94A3B8;">
+          <a href="../index.html" style="color: #CBD5E1;">Home</a> <span class="sep">/</span> <span>Knowledge Hub</span>
+        </div>
+        <h1 class="hero-title" style="max-width: 950px;">
+          Website &amp; SEO <span class="highlight">Knowledge Hub</span>
+        </h1>
+        <div class="direct-answer-box" style="max-width: 880px;">
+          <div class="box-label">Educational Resource Directory</div>
+          <p>
+            Explore 28 practical, easy-to-follow guides on website development, local Google Maps rankings, site speed, and search optimization. Each guide explains technical concepts in plain English with actionable steps for business owners and developers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Knowledge Controls: Live Search & Tag Filters -->
+    <section class="page-content-section" style="padding-top: 2.5rem;">
+      <div class="container">
+        <div class="knowledge-controls">
+          <div class="search-input-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="blog-search-input" placeholder="Search guides (e.g. Google Maps, website speed, schema, local citations)..." class="form-control">
+          </div>
+
+          <div class="tag-pills-wrap">
+            <button class="tag-pill active" data-filter="all">All Practice Areas (28)</button>
+            <button class="tag-pill" data-filter="local-seo">Local SEO (4)</button>
+            <button class="tag-pill" data-filter="web-dev">Web Development (4)</button>
+            <button class="tag-pill" data-filter="technical-seo">Technical Audits (4)</button>
+            <button class="tag-pill" data-filter="ecommerce">E-Commerce SEO (4)</button>
+            <button class="tag-pill" data-filter="semantic">Semantic Content (4)</button>
+            <button class="tag-pill" data-filter="performance">Core Web Vitals (4)</button>
+            <button class="tag-pill" data-filter="links">Link Building & PR (4)</button>
+          </div>
+
+          <div id="blog-results-count" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">
+            Showing 28 guides
+          </div>
+        </div>
+
+        <!-- 28 Cluster Articles Grid -->
+        <div class="cards-grid-3" id="blog-articles-grid">
+          <!-- Cluster A: Local SEO -->
+          <div class="article-card blog-article-item" data-tag="local-seo">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Procedural</span>
+              <span>7 min read</span>
+            </div>
+            <h4><a href="google-business-profile-optimization-nepal/index.html">Google Business Profile Optimization Guide for Nepali Businesses</a></h4>
+            <p>Step-by-step framework to verify, optimize, and rank your Google Business Profile on Google Maps in Itahari, Dharan, and across Nepal.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/local-seo-itahari/index.html">Local SEO Itahari</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="local-seo">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Definitional</span>
+              <span>6 min read</span>
+            </div>
+            <h4><a href="local-citations-nap-consistency-guide/index.html">Local Citations & NAP Consistency: The Foundation of Local Search</a></h4>
+            <p>Learn why identical Name, Address, and Phone (NAP) citations across Nepali business portals and directories dictate Google Maps ranking power.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/local-seo-itahari/index.html">Local SEO Itahari</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="local-seo">
+            <div class="article-card-meta">
+              <span class="badge badge-gold">Strategic</span>
+              <span>8 min read</span>
+            </div>
+            <h4><a href="multi-location-seo-eastern-nepal/index.html">Multi-Location SEO Strategy for Eastern Nepal Enterprises</a></h4>
+            <p>How growing retail, hospitality, and healthcare brands capture localized search traffic across Itahari, Dharan, and Biratnagar.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/local-seo-itahari/index.html">Local SEO Itahari</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="local-seo">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Comparative</span>
+              <span>5 min read</span>
+            </div>
+            <h4><a href="local-seo-vs-organic-seo-differences/index.html">Local SEO vs. Organic SEO: Key Differences and Strategic Allocation</a></h4>
+            <p>Understand the core algorithmic differences between Google's Local Map Pack algorithm and core organic indexation.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/local-seo-itahari/index.html">Local SEO Itahari</a>
+            </div>
+          </div>
+
+          <!-- Cluster B: SEO Web Dev -->
+          <div class="article-card blog-article-item" data-tag="web-dev">
+            <div class="article-card-meta">
+              <span class="badge badge-gold">Decision-Making</span>
+              <span>9 min read</span>
+            </div>
+            <h4><a href="nextjs-vs-wordpress-for-seo/index.html">Next.js vs. WordPress for Enterprise SEO: Architectural Comparison</a></h4>
+            <p>Comprehensive architectural showdown: Server-Side Rendering (SSR) and Static Site Generation (SSG) vs. traditional PHP/WordPress CMS platforms.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/seo-optimized-web-development/index.html">SEO Web Development</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="web-dev">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Checklist</span>
+              <span>7 min read</span>
+            </div>
+            <h4><a href="mobile-first-responsive-design-checklist/index.html">Mobile-First Responsive Design Checklist for High Conversion</a></h4>
+            <p>Ensure 100% mobile parity for Google's Smartphone crawler while optimizing touch targets, typography hierarchy, and conversion forms.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/seo-optimized-web-development/index.html">SEO Web Development</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="web-dev">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Technical</span>
+              <span>6 min read</span>
+            </div>
+            <h4><a href="static-site-generation-benefits-ranking/index.html">Why Static Site Generation (SSG) Outperforms Monolithic CMS</a></h4>
+            <p>Discover why Jamstack, pre-rendered HTML, and edge CDN delivery provide massive ranking advantages over traditional dynamic server architectures.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/seo-optimized-web-development/index.html">SEO Web Development</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="web-dev">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Procedural</span>
+              <span>8 min read</span>
+            </div>
+            <h4><a href="schema-markup-implementation-guide/index.html">JSON-LD Schema Markup Implementation Guide for Local Businesses</a></h4>
+            <p>Master rich snippet generation using JSON-LD: ProfessionalService, LocalBusiness, BreadcrumbList, and FAQPage structured data implementation.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/seo-optimized-web-development/index.html">SEO Web Development</a>
+            </div>
+          </div>
+
+          <!-- Cluster C: Technical SEO Audit -->
+          <div class="article-card blog-article-item" data-tag="technical-seo">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Procedural</span>
+              <span>11 min read</span>
+            </div>
+            <h4><a href="how-to-conduct-technical-seo-audit/index.html">Step-by-Step Technical SEO Audit Procedure for 2026</a></h4>
+            <p>Complete walkthrough: Crawling, indexation auditing, log file inspection, canonical verification, and mobile rendering diagnostics.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/technical-seo-audit/index.html">Technical SEO Audit</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="technical-seo">
+            <div class="article-card-meta">
+              <span class="badge badge-gold">Strategic</span>
+              <span>8 min read</span>
+            </div>
+            <h4><a href="crawl-budget-optimization-large-sites/index.html">Crawl Budget Optimization for High-Volume Web Platforms</a></h4>
+            <p>Eliminate crawl waste on thin, duplicate, or faceted URLs. Direct search crawler attention to your most profitable revenue-generating content.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/technical-seo-audit/index.html">Technical SEO Audit</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="technical-seo">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Technical</span>
+              <span>7 min read</span>
+            </div>
+            <h4><a href="fixing-canonical-tag-issues-pagination/index.html">Fixing Canonical Tag Traps, Self-Referential Links & Pagination</a></h4>
+            <p>Solve self-referencing canonical mistakes, cross-domain parameter conflicts, and paginated archive indexation dilemmas.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/technical-seo-audit/index.html">Technical SEO Audit</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="technical-seo">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Security</span>
+              <span>6 min read</span>
+            </div>
+            <h4><a href="https-ssl-security-seo-impact/index.html">HTTPS, SSL/TLS, and Security Headers: Search Ranking Signals</a></h4>
+            <p>Configure TLS 1.3, HSTS preload, Content Security Policy, and modern security headers to safeguard domain trust and search ranking signals.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/technical-seo-audit/index.html">Technical SEO Audit</a>
+            </div>
+          </div>
+
+          <!-- Cluster D: E-Commerce SEO -->
+          <div class="article-card blog-article-item" data-tag="ecommerce">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Procedural</span>
+              <span>8 min read</span>
+            </div>
+            <h4><a href="ecommerce-product-schema-rich-snippets/index.html">E-Commerce Product Schema & Merchant Rich Snippet Optimization</a></h4>
+            <p>Add structured schema for price, availability, aggregateRating, shippingDetails, and merchant return policies to earn eye-catching Google rich snippets.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/ecommerce-seo-nepal/index.html">E-Commerce SEO</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="ecommerce">
+            <div class="article-card-meta">
+              <span class="badge badge-gold">Technical</span>
+              <span>9 min read</span>
+            </div>
+            <h4><a href="handling-faceted-navigation-duplicate-content/index.html">Handling Faceted Navigation Without Indexation Bloat</a></h4>
+            <p>Master the delicate balance between high-converting user filtering and search engine crawl efficiency on multi-attribute online stores.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/ecommerce-seo-nepal/index.html">E-Commerce SEO</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="ecommerce">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Procedural</span>
+              <span>7 min read</span>
+            </div>
+            <h4><a href="optimizing-shopify-woocommerce-performance/index.html">Optimizing Shopify and WooCommerce Performance for Search</a></h4>
+            <p>Step-by-step optimization techniques to strip app bloat, defer unneeded JavaScript, and optimize checkout funnels for higher organic conversions.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/ecommerce-seo-nepal/index.html">E-Commerce SEO</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="ecommerce">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Strategic</span>
+              <span>8 min read</span>
+            </div>
+            <h4><a href="ecommerce-category-page-seo-strategy/index.html">E-Commerce Category Page Architecture & Internal Linking</a></h4>
+            <p>Category pages drive over 70% of e-commerce organic traffic. Learn how to structure topical copy, breadcrumbs, and product links for maximum ranking.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/ecommerce-seo-nepal/index.html">E-Commerce SEO</a>
+            </div>
+          </div>
+
+          <!-- Cluster E: Semantic Content -->
+          <div class="article-card blog-article-item" data-tag="semantic">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Strategic</span>
+              <span>10 min read</span>
+            </div>
+            <h4><a href="topical-authority-clustering-framework/index.html">The Topical Authority Clustering Framework: Pillar-Cluster Blueprint</a></h4>
+            <p>A masterclass on topic modeling: How to map sub-topics, organize content tiers, and deploy reciprocal internal linking to dominate search results.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/semantic-content-strategy/index.html">Semantic Content Strategy</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="semantic">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Technical</span>
+              <span>8 min read</span>
+            </div>
+            <h4><a href="entity-based-seo-google-knowledge-graph/index.html">Entity-Based SEO and the Google Knowledge Graph</a></h4>
+            <p>Shift your SEO from matching keyword strings to understanding 'things'. How Google's Knowledge Graph extracts and rewards verified web entities.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/semantic-content-strategy/index.html">Semantic Content Strategy</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="semantic">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Procedural</span>
+              <span>7 min read</span>
+            </div>
+            <h4><a href="search-intent-matching-content-briefs/index.html">Matching Search Intent: Crafting High-Converting Content Briefs</a></h4>
+            <p>Deconstruct Google SERPs to understand search intent. How to format your content to satisfy user queries and capture position zero snippets.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/semantic-content-strategy/index.html">Semantic Content Strategy</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="semantic">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Procedural</span>
+              <span>6 min read</span>
+            </div>
+            <h4><a href="how-to-update-decaying-content/index.html">Content Refresh Playbook: Recovering Dropped Rankings and Traffic</a></h4>
+            <p>Identify decaying articles losing impressions, update outdated statistics, add missing sub-entities, and republish for rapid traffic resurgence.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/semantic-content-strategy/index.html">Semantic Content Strategy</a>
+            </div>
+          </div>
+
+          <!-- Cluster F: Performance & Core Web Vitals -->
+          <div class="article-card blog-article-item" data-tag="performance">
+            <div class="article-card-meta">
+              <span class="badge badge-gold">Technical</span>
+              <span>9 min read</span>
+            </div>
+            <h4><a href="inp-interaction-to-next-paint-guide/index.html">Mastering INP: Debugging Long Animation Frames in Modern Browsers</a></h4>
+            <p>Step-by-step diagnostic guide to breaking up long tasks, deferring unneeded JavaScript execution, and ensuring smooth UI responsiveness.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/core-web-vitals-speed/index.html">Core Web Vitals Speed</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="performance">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Procedural</span>
+              <span>8 min read</span>
+            </div>
+            <h4><a href="lcp-optimization-hero-images-fonts/index.html">Optimizing Largest Contentful Paint (LCP): Critical Rendering Path</a></h4>
+            <p>Master resource prioritization: preload hero images, optimize font loading with font-display swap, and eliminate render-blocking CSS stylesheets.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/core-web-vitals-speed/index.html">Core Web Vitals Speed</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="performance">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Technical</span>
+              <span>6 min read</span>
+            </div>
+            <h4><a href="cls-cumulative-layout-shift-fixes/index.html">Eliminating Cumulative Layout Shift (CLS): Layout Stability Guide</a></h4>
+            <p>Stop annoying page jumps. How to reserve aspect-ratio dimensions for images, dynamically injected banners, and web fonts to achieve 0.00 CLS.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/core-web-vitals-speed/index.html">Core Web Vitals Speed</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="performance">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Technical</span>
+              <span>7 min read</span>
+            </div>
+            <h4><a href="image-compression-avif-webp-delivery/index.html">Next-Gen Image Formats: AVIF vs. WebP Implementation Blueprint</a></h4>
+            <p>Compare compression efficiency, browser compatibility, and responsive HTML picture tag implementations for sub-second image delivery.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/core-web-vitals-speed/index.html">Core Web Vitals Speed</a>
+            </div>
+          </div>
+
+          <!-- Cluster G: Enterprise Link Building -->
+          <div class="article-card blog-article-item" data-tag="links">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Strategic</span>
+              <span>9 min read</span>
+            </div>
+            <h4><a href="white-hat-link-building-tactics-2026/index.html">Ethical White-Hat Link Building Tactics That Deliver Lasting Authority</a></h4>
+            <p>Discover modern, safe link acquisition strategies: Digital PR, original survey data, resource link building, and broken link reclamation.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/enterprise-link-building/index.html">Enterprise Link Building</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="links">
+            <div class="article-card-meta">
+              <span class="badge badge-gold">Technical</span>
+              <span>7 min read</span>
+            </div>
+            <h4><a href="anchor-text-distribution-best-practices/index.html">Anchor Text Distribution: Preventing Google Algorithmic Penalties</a></h4>
+            <p>Maintain healthy anchor text diversity: Branded, naked URL, generic, and partial-match ratios to maximize rankings without spam flags.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/enterprise-link-building/index.html">Enterprise Link Building</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="links">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Decision-Making</span>
+              <span>6 min read</span>
+            </div>
+            <h4><a href="toxic-backlink-audit-disavow-guide/index.html">When and How to Disavow Spammy Backlinks in Google Search Console</a></h4>
+            <p>Google's SpamBrain ignores most spam automatically. Learn the rare scenarios when a formal disavow file is genuinely required.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/enterprise-link-building/index.html">Enterprise Link Building</a>
+            </div>
+          </div>
+
+          <div class="article-card blog-article-item" data-tag="links">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Procedural</span>
+              <span>8 min read</span>
+            </div>
+            <h4><a href="competitor-backlink-gap-analysis/index.html">Step-by-Step Competitor Link Gap Analysis Using Open Tools</a></h4>
+            <p>Identify high-authority domains linking to multiple industry rivals but not yet to you, and execute targeted outreach to secure them.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Parent Practice: <a href="../services/enterprise-link-building/index.html">Enterprise Link Building</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Consultation Modal & Footer -->
+  <div class="modal-backdrop" id="consultation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-title">Book Strategic SEO Consultation</h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0;">Direct advisory with Smaran Raut</p>
+        </div>
+        <button class="modal-close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="consultation-form" novalidate>
+          <div class="form-group">
+            <label for="client-name">Full Name *</label>
+            <input type="text" id="client-name" name="client_name" required placeholder="Your Name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="client-email">Email Address *</label>
+            <input type="email" id="client-email" name="client_email" required placeholder="you@company.com" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="client-phone">Phone / WhatsApp *</label>
+            <input type="tel" id="client-phone" name="client_phone" required placeholder="+977 980-0000000" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Dispatch Inquery</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">Smaran Raut</div>
+          <p style="color: #94A3B8; font-size: 0.92rem; margin-bottom: 1.25rem;">SEO Specialist &amp; Web Developer based in Itahari, Sunsari, Koshi Province, Nepal.</p>
+          <p style="font-size: 0.85rem; color: #64748B;"><strong>Office:</strong> Main Road, Ward 4, Itahari, Sunsari 56705, Nepal<br><strong>Inquiries:</strong> contact@smaranraut.com.np &middot; +977 980-0000000</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="../services/seo-optimized-web-development/index.html">SEO Web Development</a></li>
+            <li><a href="../services/local-seo-itahari/index.html">Local SEO Itahari</a></li>
+            <li><a href="../services/technical-seo-audit/index.html">SEO for Existing Sites</a></li>
+            <li><a href="../services/core-web-vitals-speed/index.html">Maintenance &amp; Speed</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Knowledge Hub</div>
+          <ul class="footer-links">
+            <li><a href="index.html">All Helpful Guides</a></li>
+            <li><a href="google-business-profile-optimization-nepal/index.html">Google Maps Optimization</a></li>
+            <li><a href="nextjs-vs-wordpress-for-seo/index.html">Next.js vs. WordPress</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">About &amp; Legal</div>
+          <ul class="footer-links">
+            <li><a href="../about-us/index.html">About Smaran Raut</a></li>
+            <li><a href="../case-studies/index.html">Client Case Studies</a></li>
+            <li><a href="../office-location/index.html">Office Location</a></li>
+            <li><a href="../consultation/index.html">Schedule a Consultation</a></li>
+            <li><a href="../disclaimer/index.html">Professional Disclaimer</a></li>
+            <li><a href="../privacy-policy/index.html">Privacy Policy</a></li>
+            <li><a href="../terms-and-conditions/index.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-statutory-notes">&copy; 2026 Smaran Raut SEO &amp; Web Development. Registered under OCR and IRD PAN/VAT Act 2058, Nepal.</div>
+        <div><a href="../sitemap.xml" style="color: var(--accent-teal); font-size: 0.85rem; margin-right: 1rem;">XML Sitemap</a><a href="../robots.txt" style="color: var(--accent-teal); font-size: 0.85rem;">Robots.txt</a></div>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/calculators.js?v=2026_v2"></script>
+  <script src="../js/app.js?v=2026_v2"></script>
+</body>
+</html>

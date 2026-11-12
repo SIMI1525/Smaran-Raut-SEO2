@@ -1,0 +1,11 @@
+# Robots.txt for Smaran Raut SEO Consultancy (https://smaranraut.com.np)
+User-agent: *
+Allow: /
+
+# Prevent crawl budget waste on internal script assets, search queries and temp files
+Disallow: /tmp/
+Disallow: /*?*sort=*
+Disallow: /*?*filter=*
+
+# Sitemap index declaration
+Sitemap: https://smaranraut.com.np/sitemap.xml

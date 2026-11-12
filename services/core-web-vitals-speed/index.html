@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Web Vitals Optimization Nepal | Sub-Second Speed Engineering | Smaran Raut</title>
+  <meta name="description" content="Pass Google Core Web Vitals on mobile and desktop. Diagnose and fix LCP bottlenecks, INP interaction delays, and CLS layout shifts for instant load times.">
+  <link rel="canonical" href="https://smaranraut.com.np/services/core-web-vitals-speed/">
+  <meta name="robots" content="index, follow">
+  <!-- Critical Layout Fallback -->
+  <style>
+    :root {
+      --primary-dark: #1A1F1D;
+      --accent-teal: #245037;
+      --accent-gold: #8F6B38;
+      --text-slate: #38403C;
+      --bg-light: #FAF8F5;
+    }
+    body {
+      margin: 0;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-slate);
+    }
+    .mobile-nav-drawer, .modal-backdrop {
+      display: none !important;
+    }
+    .modal-backdrop.active, .mobile-nav-drawer.active {
+      display: flex !important;
+    }
+  </style>
+
+  <!-- Dual-Compatible Stylesheets -->
+  <link rel="stylesheet" href="../../css/styles.css?v=2026_v3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smaranraut.com.np/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://smaranraut.com.np/services/" },
+          { "@type": "ListItem", "position": 3, "name": "Core Web Vitals Speed", "item": "https://smaranraut.com.np/services/core-web-vitals-speed/" }
+        ]
+      },
+      {
+        "@type": "Service",
+        "name": "Core Web Vitals & Page Speed Engineering",
+        "serviceType": "Web Performance Engineering",
+        "provider": { "@type": "ProfessionalService", "name": "Smaran Raut SEO Consultancy" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is INP and why did Google replace FID with it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "INP (Interaction to Next Paint) measures the overall responsiveness of a page to user interactions (clicks, taps, typing) throughout the entire session, ensuring pages feel fluid and never freeze."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can you optimize WordPress sites to pass Core Web Vitals?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Through asset minification, CSS tree-shaking, JavaScript deferral, image modernization (AVIF/WebP), and server-side caching, we achieve high mobile PageSpeed scores on WordPress."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does page speed directly affect conversion rates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Research consistently shows every 100ms improvement in page speed increases conversion rates, while slow mobile load times cause over 50% of visitors to abandon sessions."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="../../index.html" class="brand-logo" aria-label="Smaran Raut Home">
+        <div class="logo-icon">SR</div>
+        <div class="brand-text">
+          <span class="brand-name">Smaran Raut</span>
+          <span class="brand-subtitle">SEO & Web Development</span>
+        </div>
+      </a>
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="../../index.html" class="nav-link">Home</a>
+
+        <!-- Services Dropdown -->
+        <div class="nav-dropdown active">
+          <button class="dropdown-toggle" aria-expanded="true" aria-haspopup="true">
+            Services <span class="dropdown-arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-header">
+              <span class="dropdown-section-title">Core Services</span>
+            </div>
+            <a href="../index.html" class="dropdown-item featured">
+              <span class="item-title">All Services Overview &rarr;</span>
+              <span class="item-desc">Browse our complete service offering</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="../seo-optimized-web-development/index.html" class="dropdown-item">
+              <span class="item-title">SEO-Optimized Web Development</span>
+              <span class="item-desc">Clean, fast business websites built for search</span>
+            </a>
+            <a href="../local-seo-itahari/index.html" class="dropdown-item">
+              <span class="item-title">Local SEO & Google Maps</span>
+              <span class="item-desc">Rank locally in Itahari, Dharan & Biratnagar</span>
+            </a>
+            <a href="../technical-seo-audit/index.html" class="dropdown-item">
+              <span class="item-title">SEO for Existing Websites</span>
+              <span class="item-desc">Diagnostic audits and search ranking fixes</span>
+            </a>
+            <a href="index.html" class="dropdown-item">
+              <span class="item-title">Website Maintenance & Speed</span>
+              <span class="item-desc">Mobile optimization and ongoing technical care</span>
+            </a>
+            <a href="../ecommerce-seo-nepal/index.html" class="dropdown-item">
+              <span class="item-title">E-Commerce SEO Nepal</span>
+              <span class="item-desc">Product structured data and store visibility</span>
+            </a>
+            <a href="../enterprise-link-building/index.html" class="dropdown-item">
+              <span class="item-title">Ongoing Website Management</span>
+              <span class="item-desc">Monthly search tracking and site management</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Knowledge Hub Dropdown -->
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Knowledge Hub <span class="dropdown-arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-header">
+              <span class="dropdown-section-title">Educational Guides</span>
+            </div>
+            <a href="../../blog/index.html" class="dropdown-item featured">
+              <span class="item-title">Knowledge Hub Directory &rarr;</span>
+              <span class="item-desc">Explore all 28 in-depth SEO guides</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="../../blog/google-business-profile-optimization-nepal/index.html" class="dropdown-item">
+              <span class="item-title">Google Maps & Local SEO</span>
+              <span class="item-desc">Profile optimization & citations in Nepal</span>
+            </a>
+            <a href="../../blog/nextjs-vs-wordpress-for-seo/index.html" class="dropdown-item">
+              <span class="item-title">Web Development & Speed</span>
+              <span class="item-desc">Framework comparisons & mobile performance</span>
+            </a>
+            <a href="../../blog/schema-markup-implementation-guide/index.html" class="dropdown-item">
+              <span class="item-title">Technical Audits & Schema</span>
+              <span class="item-desc">Structured data and indexation fixes</span>
+            </a>
+            <a href="../../blog/topical-authority-clustering-framework/index.html" class="dropdown-item">
+              <span class="item-title">Content & Link Strategy</span>
+              <span class="item-desc">Topical clusters and natural link acquisition</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="../../case-studies/index.html" class="nav-link">Case Studies</a>
+        <a href="../../about-us/index.html" class="nav-link">About</a>
+        <a href="../../contact-us/index.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-cta-group">
+        <button class="btn btn-primary btn-consultation" data-modal="consultation" data-service="core-web-vitals">Book Consultation</button>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation" style="display: none;">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <div class="logo-icon">SR</div>
+        <div class="brand-text">
+          <span class="brand-name">Smaran Raut</span>
+          <span class="brand-subtitle">SEO &amp; Web Development</span>
+        </div>
+      </div>
+      <button class="modal-close-btn" id="mobile-menu-close" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="../../index.html">Home</a></li>
+      
+      <!-- Mobile Services Dropdown -->
+      <li class="mobile-dropdown-item active">
+        <button class="mobile-dropdown-toggle" aria-expanded="true">
+          <span>Services</span>
+          <span class="mobile-arrow">&#9662;</span>
+        </button>
+        <ul class="mobile-submenu" style="display: flex;">
+          <li><a href="../index.html"><strong>Services Overview &rarr;</strong></a></li>
+          <li><a href="../seo-optimized-web-development/index.html">SEO Web Development</a></li>
+          <li><a href="../local-seo-itahari/index.html">Local SEO Itahari & Maps</a></li>
+          <li><a href="../technical-seo-audit/index.html">SEO for Existing Websites</a></li>
+          <li><a href="index.html">Maintenance & Speed</a></li>
+          <li><a href="../ecommerce-seo-nepal/index.html">E-Commerce SEO Nepal</a></li>
+          <li><a href="../enterprise-link-building/index.html">Ongoing Website Management</a></li>
+        </ul>
+      </li>
+
+      <!-- Mobile Knowledge Hub Dropdown -->
+      <li class="mobile-dropdown-item">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>Knowledge Hub</span>
+          <span class="mobile-arrow">&#9662;</span>
+        </button>
+        <ul class="mobile-submenu" style="display: none;">
+          <li><a href="../../blog/index.html"><strong>Knowledge Hub Directory &rarr;</strong></a></li>
+          <li><a href="../../blog/google-business-profile-optimization-nepal/index.html">Google Maps & Local SEO</a></li>
+          <li><a href="../../blog/nextjs-vs-wordpress-for-seo/index.html">Web Development & Speed</a></li>
+          <li><a href="../../blog/schema-markup-implementation-guide/index.html">Technical SEO & Schema</a></li>
+          <li><a href="../../blog/topical-authority-clustering-framework/index.html">Content & Link Strategy</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../../case-studies/index.html">Case Studies</a></li>
+      <li><a href="../../about-us/index.html">About Smaran Raut</a></li>
+      <li><a href="../../office-location/index.html">Office Location</a></li>
+      <li><a href="../../contact-us/index.html">Contact</a></li>
+    </ul>
+    <div style="padding: 1.5rem 0;">
+      <button class="btn btn-primary btn-consultation" data-modal="consultation" style="width: 100%;">Book Consultation</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="hero-section" style="padding: 3.5rem 0;">
+      <div class="container">
+        <div class="breadcrumbs" style="color: #94A3B8;">
+          <a href="../../index.html" style="color: #CBD5E1;">Home</a> <span class="sep">/</span> 
+          <a href="../index.html" style="color: #CBD5E1;">Services</a> <span class="sep">/</span> 
+          <span>Website Maintenance & Speed</span>
+        </div>
+        <h1 class="hero-title" style="max-width: 950px;">
+          Website Speed Optimization &amp; <span class="highlight">Ongoing Maintenance</span>
+        </h1>
+        <div class="direct-answer-box" style="max-width: 880px;">
+          <div class="box-label">Service Overview</div>
+          <p>
+            Website speed optimization makes your pages load quickly and smoothly on all mobile devices and computers. If your website feels sluggish, images take seconds to appear, or buttons hesitate when clicked, we clean up heavy files and optimize performance so visitors stay on your site and Google rewards you with higher rankings.
+          </p>
+        </div>
+        <div class="hero-cta-stack">
+          <button class="btn btn-gold btn-consultation" data-modal="consultation" data-service="core-web-vitals">
+            Request a Speed Audit
+          </button>
+          <a href="#procedural-framework" class="btn btn-outline-white">See How Speed Helps Your Business &darr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Centerpiece Interactive Utility: CWV Speed Impact Simulator -->
+    <section class="container" style="padding-top: 3.5rem;">
+      <div class="calculator-wrapper" id="cwv-speed-calculator">
+        <div class="calculator-header">
+          <h2 class="calculator-title">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent-teal)" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+            Interactive Website Speed &amp; Visitor Retention Simulator
+          </h2>
+          <p class="calculator-subtitle">
+            See how page loading speeds, touch responsiveness, and page stability affect visitor drop-off rates and customer inquiries.
+          </p>
+        </div>
+        <div class="calculator-grid">
+          <div class="calculator-controls">
+            <div class="form-group">
+              <label for="cwv-lcp">Main Content Load Time (LCP): <span id="cwv-lcp-val" class="range-val-badge">4.2s</span></label>
+              <input type="range" id="cwv-lcp" min="0.8" max="7.0" step="0.1" value="4.2" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="cwv-inp">Touch &amp; Click Response Time (INP): <span id="cwv-inp-val" class="range-val-badge">350ms</span></label>
+              <input type="range" id="cwv-inp" min="50" max="800" step="10" value="350" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="cwv-cls">Layout Visual Stability (CLS): <span id="cwv-cls-val" class="range-val-badge">0.18</span></label>
+              <input type="range" id="cwv-cls" min="0.00" max="0.60" step="0.01" value="0.18" class="form-control">
+            </div>
+          </div>
+          <div class="calculator-results">
+            <div class="results-top">
+              <div class="score-display-block">
+                <div class="score-number" id="cwv-bounce-risk">+45% Bounce Risk</div>
+                <div class="score-label">Estimated Visitor Drop-Off Risk</div>
+                <div style="font-size: 1.05rem; color: #CBD5E1; margin-top: 0.25rem;" id="cwv-cvr-uplift">+18% Projected Conversion Lift</div>
+                <div style="margin-top: 0.65rem;"><span class="badge badge-gold" id="cwv-status-badge">Slow (Speed Improvement Recommended)</span></div>
+              </div>
+              <div>
+                <div class="metric-row"><span>Recommended Load Time:</span><span class="metric-val">&le; 2.5s (Fast)</span></div>
+                <div class="metric-row"><span>Recommended Response:</span><span class="metric-val">&le; 200ms (Instant)</span></div>
+              </div>
+            </div>
+            <div class="results-advice" id="cwv-advice">Evaluating page performance impact...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Body -->
+    <section class="page-content-section" id="procedural-framework">
+      <div class="container container-narrow">
+        <div class="article-body">
+          <h2>Why Website Speed Directly Affects Your Inquiries and Sales</h2>
+          <p>
+            When a potential customer opens your website on their phone, every second of waiting increases the chance they will hit the back button and call someone else. Google also officially rewards fast, mobile-friendly websites with higher search rankings because they deliver a better experience.
+          </p>
+
+          <h3>1. Faster Page Loading on Mobile Phones</h3>
+          <p>
+            We compress oversized photos, clean up background scripts, and optimize fonts so your important content and contact buttons appear instantly on any device, even on mobile data connections. Before implementing speed patches, we often conduct an initial <a href="../technical-seo-audit/index.html">SEO Health Checks &amp; Ranking Fixes for Existing Websites</a> to isolate server-level bottlenecks and database queries that hinder loading times.
+          </p>
+
+          <h3>2. Immediate Touch and Click Responsiveness</h3>
+          <p>
+            When visitors tap a phone number, menu, or quote form, they expect an immediate reaction. We remove slow background tasks that cause browsers to freeze or stutter during taps.
+          </p>
+
+          <h3>3. Smooth, Stable Screen Layouts</h3>
+          <p>
+            Few things are more annoying than trying to tap a button only for the layout to suddenly shift when a banner or image loads late. We reserve proper space for images and ads so your pages remain rock-solid and easy to navigate.
+          </p>
+
+          <h3>4. Ongoing Website Care and Updates</h3>
+          <p>
+            Websites require routine maintenance to remain fast and secure. We regularly check your site for broken links, optimize new photos, update software plugins, and verify that contact forms are delivering inquiries reliably. If your current website is built on an inflexible or bloated template that cannot be sped up, upgrading to our <a href="../seo-optimized-web-development/index.html">Fast, SEO-Optimized Website Development for Businesses in Nepal</a> delivers a clean, lightweight architecture that loads in sub-second speeds.
+          </p>
+
+          <!-- Reciprocal Links to Cluster Guides -->
+          <div style="background: var(--bg-light); border: 1.5px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.75rem; margin: 3rem 0;">
+            <h4 style="color: var(--primary-dark); margin-bottom: 0.75rem;">Helpful Guides on Website Performance:</h4>
+            <ul style="margin-bottom: 0; font-size: 0.95rem;">
+              <li><a href="../../blog/inp-interaction-to-next-paint-guide/index.html"><strong>Making Websites Responsive to Touch</strong></a> &mdash; How to ensure your website responds immediately when tapped.</li>
+              <li><a href="../../blog/lcp-optimization-hero-images-fonts/index.html"><strong>Loading Photos and Fonts Faster</strong></a> &mdash; How to make your main headers and images load quickly.</li>
+              <li><a href="../../blog/cls-cumulative-layout-shift-fixes/index.html"><strong>Fixing Jumping Page Layouts</strong></a> &mdash; How to stop pages from shifting unexpectedly while loading.</li>
+              <li><a href="../../blog/image-compression-avif-webp-delivery/index.html"><strong>Image Compression Guide for Small Businesses</strong></a> &mdash; How modern image formats save data and speed up sites.</li>
+            </ul>
+          </div>
+
+          <!-- FAQ Accordion -->
+          <div class="faq-section">
+            <h2>Frequently Asked Questions About Website Speed</h2>
+            <div class="faq-accordion">
+              <div class="accordion-item active">
+                <button class="accordion-header" aria-expanded="true">
+                  <span>Why does website speed matter so much for local businesses?</span>
+                  <span class="accordion-icon">&darr;</span>
+                </button>
+                <div class="accordion-content">
+                  Most customers in Nepal browse on mobile phones. If a website takes more than 3 seconds to load, over half of visitors leave immediately. Faster websites capture more phone calls, inquiries, and customer visits.
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span>Can you speed up my existing WordPress website?</span>
+                  <span class="accordion-icon">&darr;</span>
+                </button>
+                <div class="accordion-content">
+                  Yes. We compress heavy images, set up fast caching, remove unnecessary plugins, and clean up code to help your existing WordPress site load noticeably faster.
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button class="accordion-header" aria-expanded="false">
+                  <span>What is included in ongoing website maintenance?</span>
+                  <span class="accordion-icon">&darr;</span>
+                </button>
+                <div class="accordion-content">
+                  Ongoing maintenance includes regular backups, security checks, testing contact and booking forms, fixing broken links, and minor text or photo updates whenever you need them.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Consultation Modal & Footer -->
+  <div class="modal-backdrop" id="consultation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 id="modal-title" style="margin: 0; color: #FFFFFF; font-size: 1.35rem;">Request Website Maintenance & Speed Review</h3>
+        <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="consultation-form">
+          <div class="form-group">
+            <label for="client-name">Full Name *</label>
+            <input type="text" id="client-name" name="client_name" required placeholder="Your Name" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="client-email">Email Address *</label>
+            <input type="email" id="client-email" name="client_email" required placeholder="you@company.com" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="client-phone">Phone / WhatsApp *</label>
+            <input type="tel" id="client-phone" name="client_phone" required placeholder="+977 980-0000000" class="form-control">
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-title">Smaran Raut</div>
+          <p style="color: #94A3B8; font-size: 0.92rem; margin-bottom: 1.25rem;">SEO Specialist &amp; Web Developer based in Itahari, Sunsari, Koshi Province, Nepal.</p>
+          <p style="font-size: 0.85rem; color: #64748B;"><strong>Office:</strong> Main Road, Ward 4, Itahari, Sunsari 56705, Nepal<br><strong>Inquiries:</strong> contact@smaranraut.com.np &middot; +977 980-0000000</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Services</div>
+          <ul class="footer-links">
+            <li><a href="../seo-optimized-web-development/index.html">SEO Web Development</a></li>
+            <li><a href="../local-seo-itahari/index.html">Local SEO Itahari</a></li>
+            <li><a href="../technical-seo-audit/index.html">SEO for Existing Sites</a></li>
+            <li><a href="index.html">Maintenance &amp; Speed</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">Knowledge Hub</div>
+          <ul class="footer-links">
+            <li><a href="../../blog/index.html">All Helpful Guides</a></li>
+            <li><a href="../../blog/inp-interaction-to-next-paint-guide/index.html">INP Optimization Guide</a></li>
+            <li><a href="../../blog/lcp-optimization-hero-images-fonts/index.html">LCP Acceleration</a></li>
+            <li><a href="../../blog/cls-cumulative-layout-shift-fixes/index.html">CLS Layout Shift Fixes</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer-col-title">About &amp; Legal</div>
+          <ul class="footer-links">
+            <li><a href="../../about-us/index.html">About Smaran Raut</a></li>
+            <li><a href="../../case-studies/index.html">Client Case Studies</a></li>
+            <li><a href="../../office-location/index.html">Office Location</a></li>
+            <li><a href="../../consultation/index.html">Schedule a Consultation</a></li>
+            <li><a href="../../disclaimer/index.html">Professional Disclaimer</a></li>
+            <li><a href="../../privacy-policy/index.html">Privacy Policy</a></li>
+            <li><a href="../../terms-and-conditions/index.html">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-statutory-notes">&copy; 2026 Smaran Raut SEO &amp; Web Development. Registered under OCR &amp; IRD PAN/VAT Act 2058, Nepal.</div>
+        <div><a href="../../sitemap.xml" style="color: var(--accent-teal); font-size: 0.85rem; margin-right: 1rem;">XML Sitemap</a><a href="../../robots.txt" style="color: var(--accent-teal); font-size: 0.85rem;">Robots.txt</a></div>
+      </div>
+    </div>
+  </footer>
+  <script src="../../js/calculators.js?v=2026_v2"></script>
+  <script src="../../js/app.js?v=2026_v2"></script>
+</body>
+</html>
