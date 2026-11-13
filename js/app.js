@@ -1,6 +1,7 @@
 /**
  * Core Application Script & Universal Event Architecture
  * - Universal Event Delegation for Modals, CTAs, Mobile Drawers & Accordions
+ * - Robust Header Dropdown State Management (Auto-Close & BFCache Resilient)
  * - Universal Form Interception with Toast Feedback
  * - Knowledge Hub Live Search & Tag Filtering
  * - Clean Scroll-Locking & Escape Handlers
@@ -68,6 +69,52 @@
     document.body.classList.remove('modal-open');
   }
 
+  // Central Dropdown & Navigation State Manager
+  function closeAllDropdowns() {
+    // 1. Reset all desktop dropdowns
+    document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+      dropdown.classList.remove('active');
+      const toggle = dropdown.querySelector('.dropdown-toggle');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    });
+
+    // 2. Reset all mobile dropdown items
+    document.querySelectorAll('.mobile-dropdown-item').forEach(item => {
+      item.classList.remove('active');
+      const toggle = item.querySelector('.mobile-dropdown-toggle');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      const submenu = item.querySelector('.mobile-submenu');
+      if (submenu) submenu.style.display = 'none';
+    });
+
+    // 3. Remove lingering focus so :focus-within doesn't keep dropdowns visible
+    if (document.activeElement && (document.activeElement.closest('.nav-dropdown') || document.activeElement.closest('.mobile-nav-drawer'))) {
+      document.activeElement.blur();
+    }
+  }
+
+  function closeMobileDrawer() {
+    document.querySelectorAll('.mobile-nav-drawer').forEach(drawer => {
+      drawer.classList.remove('active');
+    });
+    document.body.classList.remove('modal-open');
+  }
+
+  // Bind mouseleave / mouseenter on desktop dropdowns to cleanly reset hover suppression
+  function initDropdownHoverListeners() {
+    document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+      dropdown.addEventListener('mouseleave', function () {
+        this.classList.remove('is-closed');
+        this.classList.remove('active');
+        const toggle = this.querySelector('.dropdown-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      });
+      dropdown.addEventListener('mouseenter', function () {
+        this.classList.remove('is-closed');
+      });
+    });
+  }
+
   // Universal Event Delegation
   document.addEventListener('click', function (e) {
     // 1. Consultation Modal Triggers
@@ -92,18 +139,40 @@
       return;
     }
 
-    // 4. Mobile Menu Open
-    if (e.target.closest('#mobile-menu-toggle')) {
-      e.preventDefault();
-      const drawer = document.getElementById('mobile-nav-drawer');
-      if (drawer) {
-        drawer.classList.add('active');
-        document.body.classList.add('modal-open');
+    // 4a. Dropdown Menu Item Click (Services & Knowledge Hub)
+    // Instantly close the dropdown and blur the link so it never remains open after navigation
+    const dropdownLink = e.target.closest('.dropdown-menu a, .dropdown-item');
+    if (dropdownLink) {
+      const parentDropdown = dropdownLink.closest('.nav-dropdown');
+      if (parentDropdown) {
+        parentDropdown.classList.add('is-closed');
+        parentDropdown.classList.remove('active');
+        const toggle = parentDropdown.querySelector('.dropdown-toggle');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
       }
+      closeAllDropdowns();
+      return; // Allow standard link navigation to continue
+    }
+
+    // 4b. Mobile Navigation Link Click
+    const mobileLink = e.target.closest('.mobile-nav-drawer a, .mobile-submenu a');
+    if (mobileLink && !mobileLink.classList.contains('mobile-dropdown-toggle')) {
+      closeAllDropdowns();
+      closeMobileDrawer();
+      return; // Allow standard link navigation to continue
+    }
+
+    // 4c. Mobile Menu Open
+    if (e.target.closest('#mobile-menu-toggle, #mobile-menu-open-btn, .mobile-menu-btn')) {
+      e.preventDefault();
+      document.querySelectorAll('.mobile-nav-drawer').forEach(drawer => {
+        drawer.classList.add('active');
+      });
+      document.body.classList.add('modal-open');
       return;
     }
 
-    // 4b. Mobile Dropdown Toggle (Tap-to-expand)
+    // 4d. Mobile Dropdown Toggle (Tap-to-expand)
     const mobileToggle = e.target.closest('.mobile-dropdown-toggle');
     if (mobileToggle) {
       e.preventDefault();
@@ -126,30 +195,39 @@
       return;
     }
 
-    // 4c. Desktop Dropdown Click Toggle & Outside Click
+    // 4e. Desktop Dropdown Click Toggle & Outside Click
     const deskToggle = e.target.closest('.dropdown-toggle');
     if (deskToggle) {
-      e.preventDefault();
       const dropdown = deskToggle.closest('.nav-dropdown');
-      if (dropdown) {
-        const isCurrentActive = dropdown.classList.contains('active');
-        document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('active'));
-        if (!isCurrentActive) {
-          dropdown.classList.add('active');
+      const isNavAnchor = deskToggle.tagName === 'A' && deskToggle.getAttribute('href') && deskToggle.getAttribute('href') !== '#';
+
+      if (isNavAnchor) {
+        // Services tab is a direct navigation link to Services Overview
+        closeAllDropdowns();
+        if (dropdown) dropdown.classList.add('is-closed');
+        return; // Allow direct navigation to proceed
+      } else {
+        // Button toggle (e.g. Knowledge Hub)
+        e.preventDefault();
+        if (dropdown) {
+          const isCurrentActive = dropdown.classList.contains('active');
+          closeAllDropdowns();
+          if (!isCurrentActive) {
+            dropdown.classList.remove('is-closed');
+            dropdown.classList.add('active');
+            deskToggle.setAttribute('aria-expanded', 'true');
+          }
         }
+        return;
       }
-      return;
     } else if (!e.target.closest('.nav-dropdown')) {
-      document.querySelectorAll('.nav-dropdown').forEach(d => d.classList.remove('active'));
+      closeAllDropdowns();
     }
 
-    // 5. Mobile Menu Close
-    if (e.target.closest('#mobile-menu-close, .mobile-nav-links a:not(.mobile-dropdown-toggle)')) {
-      const drawer = document.getElementById('mobile-nav-drawer');
-      if (drawer) {
-        drawer.classList.remove('active');
-        document.body.classList.remove('modal-open');
-      }
+    // 5. Mobile Menu Close Button
+    if (e.target.closest('#mobile-menu-close, #mobile-drawer-close-btn, .mobile-drawer-close')) {
+      e.preventDefault();
+      closeMobileDrawer();
       return;
     }
 
@@ -160,15 +238,19 @@
       const item = accHeader.closest('.accordion-item');
       if (item) {
         const isActive = item.classList.contains('active');
-        // Close siblings in same accordion if desired
         const parentAcc = item.closest('.faq-accordion');
         if (parentAcc) {
           parentAcc.querySelectorAll('.accordion-item').forEach(sibling => {
             sibling.classList.remove('active');
+            const btn = sibling.querySelector('.accordion-header');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
           });
         }
         if (!isActive) {
           item.classList.add('active');
+          accHeader.setAttribute('aria-expanded', 'true');
+        } else {
+          accHeader.setAttribute('aria-expanded', 'false');
         }
       }
       return;
@@ -193,11 +275,8 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' || e.keyCode === 27) {
       closeModal();
-      const drawer = document.getElementById('mobile-nav-drawer');
-      if (drawer && drawer.classList.contains('active')) {
-        drawer.classList.remove('active');
-        document.body.classList.remove('modal-open');
-      }
+      closeAllDropdowns();
+      closeMobileDrawer();
     }
   });
 
@@ -208,20 +287,16 @@
 
     e.preventDefault();
 
-    // Check validity
     if (!form.checkValidity()) {
       window.showToast("Please complete all required fields correctly.", "error");
       return;
     }
 
-    // Collect data summary
     const nameInput = form.querySelector('[name="name"], [name="client_name"]');
     const clientName = nameInput ? nameInput.value.trim() : "Valued Client";
 
-    // Simulate instant secure submission
     window.showToast(`Thank you, ${clientName}! Your inquiry has been securely dispatched to Smaran Raut. We will contact you within 24 business hours.`, "success");
 
-    // Reset and close modal
     form.reset();
     closeModal();
   });
@@ -254,8 +329,17 @@
     }
   }
 
-  // Live Search Input Listener for Blog
-  document.addEventListener('DOMContentLoaded', function () {
+  // Handle Lifecycle, BFCache, and Initial DOM Load
+  window.addEventListener('pageshow', function () {
+    closeAllDropdowns();
+    closeMobileDrawer();
+  });
+
+  function initApp() {
+    closeAllDropdowns();
+    closeMobileDrawer();
+    initDropdownHoverListeners();
+
     const searchInput = document.getElementById('blog-search-input');
     if (searchInput) {
       searchInput.addEventListener('input', function () {
@@ -264,6 +348,31 @@
         filterBlogArticles(activeTag);
       });
     }
-  });
+
+    // Services Overview Package Toggle (Show More / Show Less)
+    const toggleBtn = document.getElementById('toggle-packages-btn');
+    const moreContainer = document.getElementById('more-packages');
+    if (toggleBtn && moreContainer) {
+      toggleBtn.addEventListener('click', function () {
+        const isExpanded = moreContainer.classList.contains('is-expanded');
+        if (isExpanded) {
+          moreContainer.classList.remove('is-expanded');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+          toggleBtn.innerHTML = 'Show More Packages &darr;';
+          toggleBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          moreContainer.classList.add('is-expanded');
+          toggleBtn.setAttribute('aria-expanded', 'true');
+          toggleBtn.innerHTML = 'Show Less Packages &uarr;';
+        }
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+  } else {
+    initApp();
+  }
 
 })();

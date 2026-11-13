@@ -114,8 +114,8 @@
         </div>
 
         <!-- Knowledge Hub Dropdown -->
-        <div class="nav-dropdown active">
-          <button class="dropdown-toggle" aria-expanded="true" aria-haspopup="true">
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
             Knowledge Hub <span class="dropdown-arrow">&#9662;</span>
           </button>
           <div class="dropdown-menu">
@@ -192,12 +192,12 @@
       </li>
 
       <!-- Mobile Knowledge Hub Dropdown -->
-      <li class="mobile-dropdown-item active">
-        <button class="mobile-dropdown-toggle" aria-expanded="true">
+      <li class="mobile-dropdown-item">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
           <span>Knowledge Hub</span>
           <span class="mobile-arrow">&#9662;</span>
         </button>
-        <ul class="mobile-submenu" style="display: flex;">
+        <ul class="mobile-submenu" style="display: none;">
           <li><a href="index.html"><strong>Knowledge Hub Directory &rarr;</strong></a></li>
           <li><a href="google-business-profile-optimization-nepal/index.html">Google Maps & Local SEO</a></li>
           <li><a href="nextjs-vs-wordpress-for-seo/index.html">Web Development & Speed</a></li>
@@ -243,27 +243,65 @@
               <circle cx="11" cy="11" r="8"></circle>
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
-            <input type="text" id="blog-search-input" placeholder="Search guides (e.g. Google Maps, website speed, schema, local citations)..." class="form-control">
+            <input type="text" id="blog-search-input" placeholder="Search guides (e.g. Google Maps, website speed, schema, local citations, hosting)..." class="form-control">
           </div>
 
           <div class="tag-pills-wrap">
-            <button class="tag-pill active" data-filter="all">All Practice Areas (28)</button>
-            <button class="tag-pill" data-filter="local-seo">Local SEO (4)</button>
-            <button class="tag-pill" data-filter="web-dev">Web Development (4)</button>
-            <button class="tag-pill" data-filter="technical-seo">Technical Audits (4)</button>
-            <button class="tag-pill" data-filter="ecommerce">E-Commerce SEO (4)</button>
-            <button class="tag-pill" data-filter="semantic">Semantic Content (4)</button>
-            <button class="tag-pill" data-filter="performance">Core Web Vitals (4)</button>
-            <button class="tag-pill" data-filter="links">Link Building & PR (4)</button>
+            <button class="tag-pill active" data-filter="all">All Practice Areas (31)</button>
+            <button class="tag-pill" data-filter="local-seo">Local SEO &amp; Maps</button>
+            <button class="tag-pill" data-filter="web-dev">Web Development &amp; Setup</button>
+            <button class="tag-pill" data-filter="technical-seo">SEO Services &amp; Audits</button>
+            <button class="tag-pill" data-filter="ecommerce">E-Commerce SEO</button>
+            <button class="tag-pill" data-filter="semantic">Semantic Content</button>
+            <button class="tag-pill" data-filter="performance">Core Web Vitals</button>
+            <button class="tag-pill" data-filter="links">Link Building &amp; PR</button>
           </div>
 
           <div id="blog-results-count" style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">
-            Showing 28 guides
+            Showing 31 guides
           </div>
         </div>
 
-        <!-- 28 Cluster Articles Grid -->
+        <!-- 31 Knowledge Hub Articles Grid -->
         <div class="cards-grid-3" id="blog-articles-grid">
+          <!-- Featured Pillar 1: Website Setup & Management -->
+          <div class="article-card blog-article-item" data-tag="web-dev" style="border: 2px solid var(--accent-teal);">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Foundational Guide</span>
+              <span>8 min read</span>
+            </div>
+            <h4><a href="website-setup-and-management/index.html">Website Setup &amp; Management: Domains, Hosting, Launch &amp; Maintenance</a></h4>
+            <p>Plain-English breakdown of what domain registration, web hosting, pre-launch testing, and ongoing website maintenance mean for business owners.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Related Offering: <a href="../services/index.html#pkg-complete-website">Complete Website Package</a>
+            </div>
+          </div>
+
+          <!-- Featured Pillar 2: SEO Services Explained -->
+          <div class="article-card blog-article-item" data-tag="technical-seo" style="border: 2px solid var(--accent-teal);">
+            <div class="article-card-meta">
+              <span class="badge badge-teal">Foundational Guide</span>
+              <span>10 min read</span>
+            </div>
+            <h4><a href="seo-services-explained/index.html">SEO Services Explained: Plain-English Guide to What Each Service Does</a></h4>
+            <p>Understand keyword research, content optimization, site speed improvements, technical audits, search performance reviews, and local business SEO.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Related Offering: <a href="../services/index.html">Services Overview Packages</a>
+            </div>
+          </div>
+
+          <!-- Featured Pillar 3: Social Media & Online Advertising -->
+          <div class="article-card blog-article-item" data-tag="local-seo" style="border: 2px solid var(--accent-gold);">
+            <div class="article-card-meta">
+              <span class="badge badge-gold">Advertising &amp; Maps</span>
+              <span>7 min read</span>
+            </div>
+            <h4><a href="social-media-and-online-advertising/index.html">Social Media and Online Advertising: Ads, Google Profile &amp; Google Maps</a></h4>
+            <p>Learn how Facebook/Instagram ads, Google Business Profile optimization, and Google Maps visibility attract ready-to-buy local customers.</p>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: auto;">
+              Related Offering: <a href="../services/index.html#pkg-business-growth">Complete Business Growth Package</a>
+            </div>
+          </div>
           <!-- Cluster A: Local SEO -->
           <div class="article-card blog-article-item" data-tag="local-seo">
             <div class="article-card-meta">
@@ -686,6 +724,6 @@
     </div>
   </footer>
   <script src="../js/calculators.js?v=2026_v2"></script>
-  <script src="../js/app.js?v=2026_v2"></script>
+  <script src="../js/app.js?v=2026_v5"></script>
 </body>
 </html>

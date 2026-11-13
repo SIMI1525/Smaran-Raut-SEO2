@@ -218,7 +218,42 @@ const SITE_DATA = {
   ],
 
   clusterArticles: [
-    // 28 cluster articles mapped with relative paths
+    {
+      slug: "website-setup-and-management",
+      title: "Website Setup & Management Guide: Domains, Hosting, Launch & Maintenance",
+      h1: "Website Setup & Management: Plain-English Guide to Domains, Hosting, Launch & Care",
+      parentSlug: "services",
+      parentName: "Services Overview",
+      intent: "Educational",
+      metaTitle: "Website Setup & Management Guide | Domains, Hosting & Care | Smaran Raut",
+      metaDesc: "A plain-English guide to domain registration, website hosting, launch procedures, and ongoing website maintenance for business owners.",
+      directAnswer: "Launching and managing a business website involves registering your digital address (domain), renting secure server space (hosting), verifying and connecting files before launch, and keeping the website fast, secure, and up to date over time.",
+      readTime: "8 min read"
+    },
+    {
+      slug: "seo-services-explained",
+      title: "SEO Services Explained: Plain-English Guide to What Each Service Does",
+      h1: "SEO Services Explained: What Each Service Does and How It Helps Your Business",
+      parentSlug: "services",
+      parentName: "Services Overview",
+      intent: "Educational",
+      metaTitle: "SEO Services Explained | Plain-English SEO Guide | Smaran Raut",
+      metaDesc: "Understand keyword research, content optimization, site speed improvements, technical audits, search performance reviews, and local business SEO.",
+      directAnswer: "Search engine optimization helps your business appear when customers search on Google. Core services include finding customer search terms (keywords), improving page text, speeding up mobile loading, and verifying technical indexing health.",
+      readTime: "10 min read"
+    },
+    {
+      slug: "social-media-and-online-advertising",
+      title: "Social Media and Online Advertising: Ads, Google Profile & Google Maps",
+      h1: "Social Media and Online Advertising: How Ads, Google Business Profile & Google Maps Drive Customers",
+      parentSlug: "services",
+      parentName: "Services Overview",
+      intent: "Educational",
+      metaTitle: "Social Media & Online Ads Guide | Maps & Local Growth | Smaran Raut",
+      metaDesc: "Learn how Facebook and Instagram ads, Google Business Profile setup, and Google Maps visibility attract ready-to-buy customers in your area.",
+      directAnswer: "Combining targeted social media ads on Facebook and Instagram with an optimized Google Business Profile and prominent Google Maps rankings enables local businesses to reach both active searchers and social media users nearby.",
+      readTime: "7 min read"
+    },
     {
       slug: "google-business-profile-optimization-nepal",
       title: "Google Business Profile Optimization Guide for Nepali Businesses",
