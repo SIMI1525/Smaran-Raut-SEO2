@@ -598,6 +598,26 @@ const SITE_DATA = {
     }
   ],
 
+  locations: [
+    { city: "Itahari", slug: "seo-expert-itahari", district: "Sunsari", h1: "No.1 SEO Expert in Itahari, Nepal - Smaran Raut", title: "SEO Expert in Itahari, Nepal - Smaran Raut" },
+    { city: "Dharan", slug: "seo-expert-dharan", district: "Sunsari", h1: "No.1 SEO Expert in Dharan, Nepal - Smaran Raut", title: "SEO Expert in Dharan, Nepal - Smaran Raut" },
+    { city: "Biratnagar", slug: "seo-expert-biratnagar", district: "Morang", h1: "No.1 SEO Expert in Biratnagar, Nepal - Smaran Raut", title: "SEO Expert in Biratnagar, Nepal - Smaran Raut" },
+    { city: "Duhabi", slug: "seo-expert-duhabi", district: "Sunsari", h1: "No.1 SEO Expert in Duhabi, Nepal - Smaran Raut", title: "SEO Expert in Duhabi, Nepal - Smaran Raut" },
+    { city: "Inaruwa", slug: "seo-expert-inaruwa", district: "Sunsari", h1: "No.1 SEO Expert in Inaruwa, Nepal - Smaran Raut", title: "SEO Expert in Inaruwa, Nepal - Smaran Raut" },
+    { city: "Jhumka", slug: "seo-expert-jhumka", district: "Sunsari", h1: "No.1 SEO Expert in Jhumka, Nepal - Smaran Raut", title: "SEO Expert in Jhumka, Nepal - Smaran Raut" },
+    { city: "Ramdhuni", slug: "seo-expert-ramdhuni", district: "Sunsari", h1: "No.1 SEO Expert in Ramdhuni, Nepal - Smaran Raut", title: "SEO Expert in Ramdhuni, Nepal - Smaran Raut" },
+    { city: "Belbari", slug: "seo-expert-belbari", district: "Morang", h1: "No.1 SEO Expert in Belbari, Nepal - Smaran Raut", title: "SEO Expert in Belbari, Nepal - Smaran Raut" },
+    { city: "Dhankuta", slug: "seo-expert-dhankuta", district: "Dhankuta", h1: "No.1 SEO Expert in Dhankuta, Nepal - Smaran Raut", title: "SEO Expert in Dhankuta, Nepal - Smaran Raut" },
+    { city: "Rangeli", slug: "seo-expert-rangeli", district: "Morang", h1: "No.1 SEO Expert in Rangeli, Nepal - Smaran Raut", title: "SEO Expert in Rangeli, Nepal - Smaran Raut" },
+    { city: "Urlabari", slug: "seo-expert-urlabari", district: "Morang", h1: "No.1 SEO Expert in Urlabari, Nepal - Smaran Raut", title: "SEO Expert in Urlabari, Nepal - Smaran Raut" },
+    { city: "Damak", slug: "seo-expert-damak", district: "Jhapa", h1: "No.1 SEO Expert in Damak, Nepal - Smaran Raut", title: "SEO Expert in Damak, Nepal - Smaran Raut" },
+    { city: "Gaighat", slug: "seo-expert-gaighat", district: "Udayapur", h1: "No.1 SEO Expert in Gaighat, Nepal - Smaran Raut", title: "SEO Expert in Gaighat, Nepal - Smaran Raut" },
+    { city: "Rajbiraj", slug: "seo-expert-rajbiraj", district: "Saptari", h1: "No.1 SEO Expert in Rajbiraj, Nepal - Smaran Raut", title: "SEO Expert in Rajbiraj, Nepal - Smaran Raut" },
+    { city: "Birtamod", slug: "seo-expert-birtamod", district: "Jhapa", h1: "No.1 SEO Expert in Birtamod, Nepal - Smaran Raut", title: "SEO Expert in Birtamod, Nepal - Smaran Raut" },
+    { city: "Lahan", slug: "seo-expert-lahan", district: "Siraha", h1: "No.1 SEO Expert in Lahan, Nepal - Smaran Raut", title: "SEO Expert in Lahan, Nepal - Smaran Raut" },
+    { city: "Ilam", slug: "seo-expert-ilam", district: "Ilam", h1: "No.1 SEO Expert in Ilam, Nepal - Smaran Raut", title: "SEO Expert in Ilam, Nepal - Smaran Raut" }
+  ],
+
   trustPages: [
     {
       slug: "about-us",

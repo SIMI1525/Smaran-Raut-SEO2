@@ -1866,3 +1866,133 @@ img {
   }
 }
 
+/* ==========================================================================
+   GEOGRAPHICAL LANDING PAGES & REGIONAL MINI-TABS
+   ========================================================================== */
+
+.geo-locations-section {
+  padding: 3.5rem 0 4.5rem;
+  background-color: var(--bg-light);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.geo-locations-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s ease;
+}
+
+.geo-locations-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.geo-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 2rem;
+}
+
+.geo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-full);
+  background-color: rgba(36, 80, 55, 0.08);
+  color: var(--accent-teal);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.geo-title {
+  font-size: clamp(1.45rem, 2.4vw + 0.5rem, 1.95rem);
+  color: var(--primary-dark);
+  font-weight: 800;
+  margin: 0 0 0.65rem 0;
+  letter-spacing: -0.015em;
+}
+
+.geo-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-slate);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.geo-tabs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.geo-tab-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.geo-tab-chip:hover {
+  background-color: var(--accent-teal);
+  color: #FFFFFF;
+  border-color: var(--accent-teal);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(36, 80, 55, 0.18);
+}
+
+.geo-tab-chip .geo-pin {
+  font-size: 0.95rem;
+}
+
+.geo-tab-chip .geo-arrow {
+  font-size: 0.82rem;
+  color: var(--accent-gold);
+  transition: transform 0.2s ease, color 0.2s ease;
+  font-weight: 700;
+}
+
+.geo-tab-chip:hover .geo-arrow {
+  transform: translateX(4px);
+  color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+  .geo-locations-section {
+    padding: 2.5rem 0 3.5rem;
+  }
+  .geo-locations-card {
+    padding: 1.75rem 1.25rem;
+  }
+  .geo-tabs-grid {
+    gap: 0.55rem;
+  }
+  .geo-tab-chip {
+    font-size: 0.84rem;
+    padding: 0.5rem 0.75rem;
+    flex: 1 1 calc(50% - 0.55rem);
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .geo-tab-chip {
+    flex: 1 1 100%;
+  }
+}
+
+
