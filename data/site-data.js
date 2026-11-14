@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Master Site Architecture & Entity Graph Data
  * Brand: Smaran Raut - SEO & Web Specialist in Itahari
  * Geographic Focus: Itahari, Sunsari, Koshi Province, Nepal
@@ -15,19 +15,20 @@ const SITE_DATA = {
     title: "SEO Specialist & Web Developer",
     entity: "Smaran Raut SEO & Web Development",
     tagline: "SEO-Optimized Business Websites, Search Growth & Website Maintenance",
-    phone: "+977 980-0000000",
+    phone: "+977 9714539838",
+    whatsapp: "+977 9714539838",
     email: "contact@smaranraut.com.np",
     website: "https://smaranraut.com.np",
     address: {
-      streetAddress: "Main Road, Ward No. 4",
+      streetAddress: "Itahari Chowk, middle of Janta Galli",
       addressLocality: "Itahari",
       addressRegion: "Koshi Province",
       postalCode: "56705",
       addressCountry: "NP"
     },
     geo: {
-      latitude: "26.6646",
-      longitude: "87.2798"
+      latitude: "26.661694",
+      longitude: "87.275194"
     },
     openingHours: "Mo-Fr 09:00-18:00, Sa 10:00-15:00",
     regulators: [
@@ -633,7 +634,7 @@ const SITE_DATA = {
       h1: "Contact Smaran Raut: Let's Discuss Your Website or SEO Project",
       metaTitle: "Contact Smaran Raut | SEO & Web Inquiries in Itahari | Phone & Email",
       metaDesc: "Get in touch for website development, SEO improvements for existing sites, and ongoing maintenance. Response within 24 business hours.",
-      directAnswer: "You can reach Smaran Raut directly by email at contact@smaranraut.com.np, by phone or WhatsApp at +977 980-0000000, or in person at our office on Main Road, Ward No. 4, Itahari, Sunsari, Koshi Province, Nepal."
+      directAnswer: "You can reach Smaran Raut directly by email at contact@smaranraut.com.np, by phone or WhatsApp at +977 9714539838, or in person at our office on Main Road, Ward No. 4, Itahari, Sunsari, Koshi Province, Nepal."
     },
     {
       slug: "consultation",
