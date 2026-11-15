@@ -182,7 +182,7 @@ function Get-MiniTabsHtml([string]$currentSlug, [bool]$isHome = $false) {
             </div>
             <h2 class="geo-title">Explore SEO Services in Nearby Areas</h2>
             <p class="geo-subtitle">
-              Based in Itahari, Sunsari, Smaran Raut provides hands-on search engine optimization, website speed enhancement, and technical web development to businesses across Eastern Nepal.
+              Smaran Raut provides SEO and website development to businesses throughout Eastern Nepal. Select a city below to view localized search services for your area.
             </p>
           </div>
           <div class="geo-tabs-grid">
@@ -505,7 +505,7 @@ foreach ($city in $cities) {
 
             <!-- Supporting Business Description Paragraph -->
             <p class="hero-desc">
-              I am an independent SEO specialist and website developer based in Itahari, proudly serving business owners, retail stores, healthcare clinics, and commercial services located in <strong>$cName</strong> and surrounding areas of $cDist District. If your business is difficult to discover when nearby customers search on Google, has a slow or outdated website, or lacks qualified inquiries, I provide straightforward, ethical search solutions engineered to deliver consistent phone calls, website visitors, and customer inquiries.
+              Smaran Raut provides search engine optimization and website development for businesses in <strong>$cName</strong> and $cDist District. Based in nearby Itahari, I help local stores, clinics, and service providers rank higher on Google, improve website speed, and generate consistent customer inquiries.
             </p>
 
             <!-- Core Service List -->
@@ -671,7 +671,7 @@ foreach ($city in $cities) {
               Helping Businesses in $cName Win Local Google Searches
             </h2>
             <p style="color: var(--text-slate); font-size: 1.05rem; line-height: 1.6;">
-              $cEco
+              We help businesses in $cName rank on Google search and Google Maps to capture nearby customer demand. $cEco
             </p>
           </div>
 
@@ -679,26 +679,26 @@ foreach ($city in $cities) {
             <div style="padding: 1.5rem; background-color: var(--bg-light); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
               <h3 style="font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 0.5rem;">Targeted Search Queries</h3>
               <p style="font-size: 0.92rem; color: var(--text-slate); margin: 0; line-height: 1.5;">
-                We optimize your website for high-intent queries that customers in $cName actually type, such as "best [service] in $cName" and "near me" mobile searches.
+                We optimize your website for terms customers in $cName search, including 'best [service] in $cName' and local mobile queries.
               </p>
             </div>
             <div style="padding: 1.5rem; background-color: var(--bg-light); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
               <h3 style="font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 0.5rem;">$cName Google Maps Setup</h3>
               <p style="font-size: 0.92rem; color: var(--text-slate); margin: 0; line-height: 1.5;">
-                Accurate address geocoding, verified categories, opening hours, and direct call buttons so $cName shoppers find directions straight to your doors.
+                We configure your Google Business Profile with accurate addresses, opening hours, and call buttons so local customers find you quickly.
               </p>
             </div>
             <div style="padding: 1.5rem; background-color: var(--bg-light); border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
               <h3 style="font-size: 1.1rem; color: var(--primary-dark); margin-bottom: 0.5rem;">Fast Smartphone Loading</h3>
               <p style="font-size: 0.92rem; color: var(--text-slate); margin: 0; line-height: 1.5;">
-                Engineered for rapid sub-second rendering across common 4G mobile networks throughout $cDist, preventing lost visitors and bounce-offs.
+                We engineer lightweight pages that load instantly on 4G mobile networks across $cDist District, preventing lost visits.
               </p>
             </div>
           </div>
 
           <div style="margin-top: 2.5rem; padding: 1.25rem 1.5rem; background-color: rgba(36, 80, 55, 0.05); border-left: 4px solid var(--accent-teal); border-radius: 0 var(--radius-md) var(--radius-md) 0;">
             <p style="margin: 0; font-size: 0.92rem; color: var(--text-slate); line-height: 1.55;">
-              <strong>Note on Service Delivery:</strong> My primary operational base is located at Main Road, Ward 4, Itahari. For clients in $cName, all SEO consulting, strategy, and website engineering are handled through direct on-site visits across the corridor and seamless remote communication. No fictional branches or fake local addresses are ever used.
+              <strong>Service Delivery Note:</strong> Smaran Raut operates from Itahari Chowk (middle of Janta Galli), Itahari. For clients in $cName, all consulting, technical audits, and website development are delivered through scheduled on-site visits and direct remote communication. We do not operate fictional branch offices in $cName.
             </p>
           </div>
         </div>
@@ -718,7 +718,7 @@ foreach ($city in $cities) {
             Interactive Local SEO Visibility &amp; Readiness Checker
           </h2>
           <p class="calculator-subtitle">
-            Evaluate your business's local search readiness in $cName based on customer reviews and consistent directory listings.
+            This tool evaluates your business's local search readiness in $cName based on customer reviews, ratings, and directory listings.
           </p>
         </div>
 
@@ -791,7 +791,7 @@ foreach ($city in $cities) {
           <span class="badge badge-teal" style="margin-bottom: 0.75rem;">Clear &amp; Predictable Process</span>
           <h2>How We Work With Businesses in $cName</h2>
           <p style="color: var(--text-muted); font-size: 1.05rem;">
-            A straightforward, hands-on approach from your initial consultation to long-term organic search results.
+            Our collaboration follows a structured four-step process to establish and grow your search presence in ${cName}:
           </p>
         </div>
 
@@ -800,25 +800,25 @@ foreach ($city in $cities) {
             <div class="process-step-card">
               <span class="process-step-num">Step 1</span>
               <div class="process-step-title">Initial Consultation</div>
-              <p class="process-step-desc">We review your $cName target customers, existing web presence, and primary search competitors.</p>
+              <p class="process-step-desc">We analyze your target market, current website performance, and competitors in $cName.</p>
             </div>
             <div class="process-arrow">&rarr;</div>
             <div class="process-step-card">
               <span class="process-step-num">Step 2</span>
               <div class="process-step-title">Website &amp; Map Audit</div>
-              <p class="process-step-desc">Diagnosing speed bottlenecks, mobile responsiveness, and local citation discrepancies.</p>
+              <p class="process-step-desc">We identify page speed issues, mobile usability flaws, and missing directory citations.</p>
             </div>
             <div class="process-arrow">&rarr;</div>
             <div class="process-step-card">
               <span class="process-step-num">Step 3</span>
               <div class="process-step-title">Targeted Optimization</div>
-              <p class="process-step-desc">Implementing verified Schema markup, localized keywords, fast code, and Google Business Profile fixes.</p>
+              <p class="process-step-desc">We add Schema structured data, optimize localized keywords, and verify your Google Business Profile.</p>
             </div>
             <div class="process-arrow">&rarr;</div>
             <div class="process-step-card">
               <span class="process-step-num">Step 4</span>
               <div class="process-step-title">Search Growth</div>
-              <p class="process-step-desc">Monitoring steady climb in Google search impressions, local phone calls, and foot traffic.</p>
+              <p class="process-step-desc">We track your climb in Google rankings, customer calls, and qualified web inquiries.</p>
             </div>
           </div>
         </div>
@@ -833,7 +833,7 @@ foreach ($city in $cities) {
             <span class="badge badge-teal" style="margin-bottom: 0.75rem;">Frequently Asked Questions</span>
             <h2>Frequently Asked Questions About SEO in $cName</h2>
             <p style="color: var(--text-muted); font-size: 1.02rem;">
-              Clear answers regarding service coverage, business location, and how we collaborate.
+              Here are straightforward answers about our SEO service coverage, delivery process, and pricing in ${cName}:
             </p>
           </div>
 
@@ -844,7 +844,7 @@ foreach ($city in $cities) {
                 <span class="accordion-icon">&darr;</span>
               </button>
               <div class="accordion-content">
-                Yes. While based in Itahari, I easily coordinate directly with business owners in $cName through both on-site working sessions and clear, regular digital updates.
+                Yes. I coordinate directly with business owners in $cName through on-site meetings and clear remote communication.
               </div>
             </div>
 
@@ -854,7 +854,7 @@ foreach ($city in $cities) {
                 <span class="accordion-icon">&darr;</span>
               </button>
               <div class="accordion-content">
-                No. My registered business office is situated at Main Road, Ward No. 4, Itahari, Sunsari. I serve businesses in $cName as part of my regional service coverage across Koshi Province and Eastern Nepal.
+                No. My physical office is located at Itahari Chowk, middle of Janta Galli, Itahari. I serve businesses in $cName as part of my regional service coverage across Eastern Nepal.
               </div>
             </div>
 
@@ -864,7 +864,7 @@ foreach ($city in $cities) {
                 <span class="accordion-icon">&darr;</span>
               </button>
               <div class="accordion-content">
-                In $cName, key beneficiaries include $cInd looking to capture customers searching locally for trusted providers on Google.
+                In $cName, key beneficiaries include $cInd that want to capture local customers searching on Google.
               </div>
             </div>
 
@@ -874,7 +874,7 @@ foreach ($city in $cities) {
                 <span class="accordion-icon">&darr;</span>
               </button>
               <div class="accordion-content">
-                Yes. All agreements and billing comply strictly with the Inland Revenue Department (IRD) PAN/VAT Act 2058.
+                Yes. All contracts and invoices strictly comply with Inland Revenue Department (IRD) PAN/VAT Act 2058 requirements.
               </div>
             </div>
           </div>
@@ -883,7 +883,7 @@ foreach ($city in $cities) {
           <div style="background: linear-gradient(145deg, #0A1628, #182C4E); padding: 3rem; border-radius: var(--radius-lg); text-align: center; color: white; margin-top: 3.5rem; border: 1px solid var(--border-dark);">
             <h3 style="color: white; font-size: 1.8rem; margin-bottom: 1rem;">Ready to Grow Your Search Presence in $cName?</h3>
             <p style="color: #CBD5E1; max-width: 600px; margin: 0 auto 1.75rem;">
-              Schedule a 30-minute consultation. We will analyze your website, discuss your goals in $cName, and map out a clear plan of action.
+              Schedule a 30-minute consultation with Smaran Raut. We will review your website, assess your local competitors in $cName, and outline a clear action plan.
             </p>
             <button class="btn btn-gold btn-consultation" data-modal="consultation" data-service="SEO Services in $cName">
               Schedule a Consultation
@@ -907,7 +907,7 @@ foreach ($city in $cities) {
             </div>
             <h2 class="location-map-title">My Service Location</h2>
             <p class="location-map-subtitle">
-              Smaran Raut operates from <strong>Itahari Chowk, middle of Janta Galli</strong> (26.661694&deg; N, 87.275194&deg; E). While this page outlines SEO and web development services provided to businesses in <strong>$cName</strong>, all technical work, strategic consulting, and project management are delivered from our central office in Itahari.
+              Smaran Raut operates from <strong>Itahari Chowk, middle of Janta Galli</strong> (26.661694&deg; N, 87.275194&deg; E). While this page outlines SEO services for businesses in <strong>$cName</strong>, all strategic consulting, development, and technical management are delivered from our central office in Itahari.
             </p>
           </div>
           <div class="map-embed-wrapper">
