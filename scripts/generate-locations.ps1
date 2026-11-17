@@ -253,6 +253,10 @@ foreach ($city in $cities) {
   </style>
 
   <!-- Dual-Compatible Stylesheets -->
+    <!-- Site Icon / Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../images/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
   <link rel="stylesheet" href="../css/styles.css?v=2026_v5">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -319,7 +323,7 @@ foreach ($city in $cities) {
   <header class="site-header">
     <div class="container nav-container">
       <a href="../index.html" class="brand-logo" aria-label="Smaran Raut Home">
-        <div class="logo-icon">SR</div>
+        <img src="../images/logo.png" alt="Smaran Raut Logo" class="brand-logo-img" width="46" height="46">
         <div class="brand-text">
           <span class="brand-name">Smaran Raut</span>
           <span class="brand-subtitle">SEO &amp; Web Development</span>
@@ -423,7 +427,7 @@ foreach ($city in $cities) {
   <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation" style="display: none;">
     <div class="mobile-drawer-header">
       <div class="brand-logo">
-        <div class="logo-icon">SR</div>
+        <img src="../images/logo.png" alt="Smaran Raut Logo" class="brand-logo-img" width="46" height="46">
         <div class="brand-text">
           <span class="brand-name">Smaran Raut</span>
           <span class="brand-subtitle">SEO &amp; Web Development</span>
@@ -1003,7 +1007,8 @@ $miniTabs
           </p>
           <p style="font-size: 0.85rem; color: #64748B;">
             <strong>Office:</strong> Itahari Chowk, middle of Janta Galli, Itahari, Sunsari 56705, Nepal<br>
-            <strong>Inquiries:</strong> contact@smaranraut.com.np &middot; <a href="tel:+9779714539838" style="color: inherit; text-decoration: none;">+977 9714539838</a>
+            <strong>Inquiries:</strong> contact@smaranraut.com.np &middot; <a href="tel:+9779714539838" style="color: inherit; text-decoration: none;">+977 9714539838</a><br>
+            <strong>Google Profile:</strong> <a href="https://g.page/r/CXbkZaR8nj4kEBM/review" target="_blank" rel="noopener noreferrer" style="color: var(--accent-teal); text-decoration: none;">Smaran Raut - No.1 SEO Expert in Itahari &rarr;</a>
           </p>
         </div>
 
@@ -1052,6 +1057,7 @@ $miniTabs
           &copy; 2026 Smaran Raut SEO &amp; Web Development. Registered under OCR and IRD PAN/VAT Act 2058, Nepal.
         </div>
         <div>
+          <a href="https://g.page/r/CXbkZaR8nj4kEBM/review" target="_blank" rel="noopener noreferrer" style="color: var(--accent-teal); font-size: 0.85rem; margin-right: 1rem;">Smaran Raut - No.1 SEO Expert in Itahari</a>
           <a href="../sitemap.xml" style="color: var(--accent-teal); font-size: 0.85rem; margin-right: 1rem;">XML Sitemap</a>
           <a href="../robots.txt" style="color: var(--accent-teal); font-size: 0.85rem;">Robots.txt</a>
         </div>

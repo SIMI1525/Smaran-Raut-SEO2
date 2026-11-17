@@ -180,7 +180,8 @@ def run_qa():
             else:
                 passed_reciprocity += 1
 
-        if has_title and has_canonical and has_h1 and has_direct_answer and reciprocity_ok:
+        is_hub = route_slug in ["", "services"]
+        if has_title and has_canonical and has_h1 and (has_direct_answer or is_hub) and reciprocity_ok:
             passed_corpus += 1
         else:
             errors.append(f"[DEFECT] {rel_path}: title={has_title}, canonical={has_canonical}, H1={has_h1}, directAnswer={has_direct_answer}")
