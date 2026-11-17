@@ -219,12 +219,12 @@ foreach ($city in $cities) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SEO Expert in $cName, Nepal - Smaran Raut</title>
   <meta name="description" content="Looking for an SEO expert in $cName, Nepal? Smaran Raut provides search engine optimization, fast business websites, and Google Maps visibility for businesses in $cName.">
-  <link rel="canonical" href="https://smaranraut.com.np/$cSlug/">
+  <link rel="canonical" href="https://smaran-seo.netlify.app/$cSlug/">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph / Social Meta -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://smaranraut.com.np/$cSlug/">
+  <meta property="og:url" content="https://smaran-seo.netlify.app/$cSlug/">
   <meta property="og:title" content="SEO Expert in $cName, Nepal - Smaran Raut">
   <meta property="og:description" content="SEO-optimized business websites, Google Maps rankings, and search improvements for businesses in $cName, Nepal. Services by Smaran Raut based in Itahari.">
   <meta property="og:locale" content="en_NP">
@@ -269,11 +269,11 @@ foreach ($city in $cities) {
     "@graph": [
       {
         "@type": ["ProfessionalService", "LocalBusiness"],
-        "@id": "https://smaranraut.com.np/#organization",
+        "@id": "https://smaran-seo.netlify.app/#organization",
         "name": "Smaran Raut - SEO & Web Development",
-        "url": "https://smaranraut.com.np",
-        "logo": "https://smaranraut.com.np/images/logo.png",
-        "image": "https://smaranraut.com.np/images/smaran-raut-hero.jpg",
+        "url": "https://smaran-seo.netlify.app",
+        "logo": "https://smaran-seo.netlify.app/images/logo.png",
+        "image": "https://smaran-seo.netlify.app/images/smaran-raut-hero.jpg",
         "description": "Professional SEO and website development services serving businesses in $cName ($cDist District) and Eastern Nepal. Registered consultancy based in Itahari.",
         "telephone": "+977-9714539838",
         "email": "contact@smaranraut.com.np",
@@ -309,8 +309,8 @@ foreach ($city in $cities) {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smaranraut.com.np/" },
-          { "@type": "ListItem", "position": 2, "name": "SEO Expert in $cName", "item": "https://smaranraut.com.np/$cSlug/" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://smaran-seo.netlify.app/" },
+          { "@type": "ListItem", "position": 2, "name": "SEO Expert in $cName", "item": "https://smaran-seo.netlify.app/$cSlug/" }
         ]
       }
     ]
@@ -554,45 +554,7 @@ foreach ($city in $cities) {
           <!-- Visual Presentation Card -->
           <div class="hero-visual-card">
             <div class="photo-wrapper">
-              <svg class="photo-svg-art" viewBox="0 0 520 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="520" height="400" fill="#F4F0E8"/>
-                <rect x="20" y="20" width="480" height="360" rx="8" fill="#FAF8F5" stroke="#E5E0D6"/>
-                
-                <rect x="50" y="45" width="130" height="110" rx="4" fill="#EFEAE0" stroke="#E5E0D6"/>
-                <line x1="115" y1="45" x2="115" y2="155" stroke="#E0DAD0" stroke-width="1.5"/>
-                <line x1="50" y1="100" x2="180" y2="100" stroke="#E0DAD0" stroke-width="1.5"/>
-                
-                <path d="M40 280C140 270 380 270 480 280L490 370H30L40 280Z" fill="#EAE5DC" stroke="#DFD9CE"/>
-                
-                <rect x="200" y="220" width="120" height="80" rx="5" fill="#FFFFFF" stroke="#8F6B38" stroke-width="1.5"/>
-                <rect x="210" y="230" width="100" height="12" rx="2" fill="#EBF3EE"/>
-                <rect x="210" y="248" width="45" height="40" rx="2" fill="#F4F0E8"/>
-                <rect x="260" y="248" width="50" height="10" rx="1" fill="#245037"/>
-                <rect x="260" y="262" width="40" height="6" rx="1" fill="#D5CEC4"/>
-                <rect x="260" y="272" width="45" height="6" rx="1" fill="#D5CEC4"/>
-                <polygon points="190,300 330,300 325,306 195,306" fill="#D5CEC4"/>
-                
-                <circle cx="150" cy="165" r="32" fill="#245037"/>
-                <circle cx="150" cy="165" r="24" fill="#D8A47F"/>
-                <path d="M110 240C110 205 130 195 150 195C170 195 190 205 190 240V270H110V240Z" fill="#1A1F1D"/>
-                <path d="M142 195L150 215L158 195H142Z" fill="#245037"/>
-                
-                <circle cx="370" cy="170" r="30" fill="#76562A"/>
-                <circle cx="370" cy="170" r="23" fill="#E0B695"/>
-                <path d="M330 240C330 208 350 200 370 200C390 200 410 208 410 240V270H330V240Z" fill="#38403C"/>
-                <path d="M364 200L370 216L376 200H364Z" fill="#8F6B38"/>
-
-                <rect x="60" y="295" width="115" height="60" rx="6" fill="#FFFFFF" stroke="#E5E0D6" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.05))"/>
-                <text x="70" y="313" fill="#626C66" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600">$cName.ToUpper() VISIBILITY</text>
-                <path d="M72 342L95 330L120 335L155 318" stroke="#245037" stroke-width="2.5" stroke-linecap="round"/>
-                <circle cx="155" cy="318" r="3.5" fill="#8F6B38"/>
-                <text x="72" y="352" fill="#245037" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700">+ Local Searches</text>
-
-                <rect x="360" y="300" width="85" height="50" rx="4" fill="#FFFFFF" stroke="#E5E0D6"/>
-                <line x1="370" y1="315" x2="430" y2="315" stroke="#245037" stroke-width="2"/>
-                <line x1="370" y1="325" x2="420" y2="325" stroke="#D5CEC4" stroke-width="1.5"/>
-                <line x1="370" y1="335" x2="410" y2="335" stroke="#D5CEC4" stroke-width="1.5"/>
-              </svg>
+              <img src="../images/hero-smaran-seo.jpg" alt="Smaran Raut - SEO Specialist &amp; Web Developer in $($loc.Name)" class="hero-photo-img" width="1024" height="636" fetchpriority="high">
             </div>
 
             <!-- Animated Qualification Chips -->
@@ -623,15 +585,6 @@ foreach ($city in $cities) {
                 </span>
                 <span class="qual-chip-text">Fluent in SEO Terminologies</span>
               </div>
-            </div>
-
-            <!-- Credential Badge with transparent location notice -->
-            <div class="floating-credential-badge">
-              <div class="credential-info">
-                <span class="cred-name">Smaran Raut</span>
-                <span class="cred-title">SEO Specialist &middot; Based in Itahari, Serving $cName</span>
-              </div>
-              <div class="verified-stamp" title="Verified Professional">&#10003;</div>
             </div>
           </div>
         </div>
@@ -1105,7 +1058,7 @@ $sitemapContent = [System.IO.File]::ReadAllText($sitemapPath, [System.Text.Encod
 $dateStr = [DateTime]::UtcNow.ToString("yyyy-MM-dd")
 $newUrls = ""
 foreach ($city in $cities) {
-    $locUrl = "https://smaranraut.com.np/$($city.Slug)/"
+    $locUrl = "https://smaran-seo.netlify.app/$($city.Slug)/"
     if ($sitemapContent -notmatch [regex]::Escape($locUrl)) {
         $newUrls += @"
   <url>

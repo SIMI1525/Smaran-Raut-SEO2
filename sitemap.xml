@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Entity Hub -->
   <url>
-    <loc>https://smaranraut.com.np/</loc>
+    <loc>https://smaran-seo.netlify.app/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,7 +10,7 @@
 
   <!-- Services Taxonomy Hub -->
   <url>
-    <loc>https://smaranraut.com.np/services/</loc>
+    <loc>https://smaran-seo.netlify.app/services/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -18,43 +18,43 @@
 
   <!-- 7 Core Practice "Money" Pages -->
   <url>
-    <loc>https://smaranraut.com.np/services/local-seo-itahari/</loc>
+    <loc>https://smaran-seo.netlify.app/services/local-seo-itahari/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/services/seo-optimized-web-development/</loc>
+    <loc>https://smaran-seo.netlify.app/services/seo-optimized-web-development/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/services/technical-seo-audit/</loc>
+    <loc>https://smaran-seo.netlify.app/services/technical-seo-audit/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/services/ecommerce-seo-nepal/</loc>
+    <loc>https://smaran-seo.netlify.app/services/ecommerce-seo-nepal/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/services/semantic-content-strategy/</loc>
+    <loc>https://smaran-seo.netlify.app/services/semantic-content-strategy/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/services/core-web-vitals-speed/</loc>
+    <loc>https://smaran-seo.netlify.app/services/core-web-vitals-speed/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/services/enterprise-link-building/</loc>
+    <loc>https://smaran-seo.netlify.app/services/enterprise-link-building/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -62,7 +62,7 @@
 
   <!-- Knowledge Hub Directory -->
   <url>
-    <loc>https://smaranraut.com.np/blog/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
@@ -70,175 +70,175 @@
 
   <!-- 28 Supporting Cluster Guides -->
   <url>
-    <loc>https://smaranraut.com.np/blog/google-business-profile-optimization-nepal/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/google-business-profile-optimization-nepal/</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/local-citations-nap-consistency-guide/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/local-citations-nap-consistency-guide/</loc>
     <lastmod>2026-02-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/multi-location-seo-eastern-nepal/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/multi-location-seo-eastern-nepal/</loc>
     <lastmod>2026-02-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/local-seo-vs-organic-seo-differences/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/local-seo-vs-organic-seo-differences/</loc>
     <lastmod>2026-02-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://smaranraut.com.np/blog/nextjs-vs-wordpress-for-seo/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/nextjs-vs-wordpress-for-seo/</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/mobile-first-responsive-design-checklist/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/mobile-first-responsive-design-checklist/</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/static-site-generation-benefits-ranking/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/static-site-generation-benefits-ranking/</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/schema-markup-implementation-guide/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/schema-markup-implementation-guide/</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://smaranraut.com.np/blog/how-to-conduct-technical-seo-audit/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/how-to-conduct-technical-seo-audit/</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/crawl-budget-optimization-large-sites/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/crawl-budget-optimization-large-sites/</loc>
     <lastmod>2026-03-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/fixing-canonical-tag-issues-pagination/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/fixing-canonical-tag-issues-pagination/</loc>
     <lastmod>2026-03-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/https-ssl-security-seo-impact/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/https-ssl-security-seo-impact/</loc>
     <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://smaranraut.com.np/blog/ecommerce-product-schema-rich-snippets/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/ecommerce-product-schema-rich-snippets/</loc>
     <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/handling-faceted-navigation-duplicate-content/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/handling-faceted-navigation-duplicate-content/</loc>
     <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/optimizing-shopify-woocommerce-performance/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/optimizing-shopify-woocommerce-performance/</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/ecommerce-category-page-seo-strategy/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/ecommerce-category-page-seo-strategy/</loc>
     <lastmod>2026-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://smaranraut.com.np/blog/topical-authority-clustering-framework/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/topical-authority-clustering-framework/</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/entity-based-seo-google-knowledge-graph/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/entity-based-seo-google-knowledge-graph/</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/search-intent-matching-content-briefs/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/search-intent-matching-content-briefs/</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/how-to-update-decaying-content/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/how-to-update-decaying-content/</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://smaranraut.com.np/blog/inp-interaction-to-next-paint-guide/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/inp-interaction-to-next-paint-guide/</loc>
     <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/lcp-optimization-hero-images-fonts/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/lcp-optimization-hero-images-fonts/</loc>
     <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/cls-cumulative-layout-shift-fixes/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/cls-cumulative-layout-shift-fixes/</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/image-compression-avif-webp-delivery/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/image-compression-avif-webp-delivery/</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://smaranraut.com.np/blog/white-hat-link-building-tactics-2026/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/white-hat-link-building-tactics-2026/</loc>
     <lastmod>2026-05-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/anchor-text-distribution-best-practices/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/anchor-text-distribution-best-practices/</loc>
     <lastmod>2026-05-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/toxic-backlink-audit-disavow-guide/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/toxic-backlink-audit-disavow-guide/</loc>
     <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/competitor-backlink-gap-analysis/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/competitor-backlink-gap-analysis/</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -246,181 +246,181 @@
 
   <!-- Institutional Trust & Governance -->
   <url>
-    <loc>https://smaranraut.com.np/about-us/</loc>
+    <loc>https://smaran-seo.netlify.app/about-us/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/contact-us/</loc>
+    <loc>https://smaran-seo.netlify.app/contact-us/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/consultation/</loc>
+    <loc>https://smaran-seo.netlify.app/consultation/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/office-location/</loc>
+    <loc>https://smaran-seo.netlify.app/office-location/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/case-studies/</loc>
+    <loc>https://smaran-seo.netlify.app/case-studies/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/disclaimer/</loc>
+    <loc>https://smaran-seo.netlify.app/disclaimer/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/editorial-policy/</loc>
+    <loc>https://smaran-seo.netlify.app/editorial-policy/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/privacy-policy/</loc>
+    <loc>https://smaran-seo.netlify.app/privacy-policy/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/terms-and-conditions/</loc>
+    <loc>https://smaran-seo.netlify.app/terms-and-conditions/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/cookie-policy/</loc>
+    <loc>https://smaran-seo.netlify.app/cookie-policy/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/website-setup-and-management/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/website-setup-and-management/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/seo-services-explained/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/seo-services-explained/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/blog/social-media-and-online-advertising/</loc>
+    <loc>https://smaran-seo.netlify.app/blog/social-media-and-online-advertising/</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-itahari/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-itahari/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-dharan/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-dharan/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-biratnagar/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-biratnagar/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-duhabi/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-duhabi/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-inaruwa/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-inaruwa/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-jhumka/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-jhumka/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-ramdhuni/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-ramdhuni/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-belbari/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-belbari/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-dhankuta/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-dhankuta/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-rangeli/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-rangeli/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-urlabari/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-urlabari/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-damak/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-damak/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-gaighat/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-gaighat/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-rajbiraj/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-rajbiraj/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-birtamod/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-birtamod/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-lahan/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-lahan/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://smaranraut.com.np/seo-expert-ilam/</loc>
+    <loc>https://smaran-seo.netlify.app/seo-expert-ilam/</loc>
     <lastmod>2026-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
