@@ -280,7 +280,7 @@
     }
   });
 
-  // Universal Form Validation & Submission Interceptor
+  // Universal Form Validation & Submission Interceptor (Netlify Forms AJAX integration)
   document.addEventListener('submit', function (e) {
     const form = e.target;
     if (!form || !form.matches('form')) return;
@@ -295,10 +295,57 @@
     const nameInput = form.querySelector('[name="name"], [name="client_name"]');
     const clientName = nameInput ? nameInput.value.trim() : "Valued Client";
 
-    window.showToast(`Thank you, ${clientName}! Your inquiry has been securely dispatched to Smaran Raut. We will contact you within 24 business hours.`, "success");
+    // Submit button loading state
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnContent = submitBtn ? submitBtn.innerHTML : '';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-busy', 'true');
+      submitBtn.textContent = 'Submitting...';
+    }
 
-    form.reset();
-    closeModal();
+    // Build URL-encoded form data according to Netlify Forms specifications
+    const formData = new FormData(form);
+    if (!formData.has('form-name')) {
+      const formName = form.getAttribute('name') || form.id;
+      formData.append('form-name', formName);
+    }
+    const body = new URLSearchParams(formData).toString();
+    const postEndpoint = form.getAttribute('action') || '/';
+
+    fetch(postEndpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body
+    })
+    .then(function (response) {
+      if (response.ok) {
+        window.showToast(`Thank you, ${clientName}! Your inquiry has been securely dispatched to Smaran Raut. We will contact you within 24 business hours.`, "success");
+        form.reset();
+        closeModal();
+      } else {
+        throw new Error('Server returned status ' + response.status);
+      }
+    })
+    .catch(function (error) {
+      console.warn('Form submission notice:', error);
+      // In local environments (file:// or python static server without Netlify endpoints),
+      // inform user gracefully that validation passed; in production, show contact fallback.
+      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:') {
+        window.showToast(`[Local Preview] Thank you, ${clientName}! Form validated. (On Netlify production, this is received by Netlify Forms).`, "success");
+        form.reset();
+        closeModal();
+      } else {
+        window.showToast("There was an issue dispatching your request online. Please contact us directly at +977 9714539838 or contact@smaranraut.com.np.", "error");
+      }
+    })
+    .finally(function () {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.removeAttribute('aria-busy');
+        submitBtn.innerHTML = originalBtnContent;
+      }
+    });
   });
 
   // Knowledge Hub Filtering Logic

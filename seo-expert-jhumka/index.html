@@ -840,7 +840,7 @@
     </section>
   </main>
 
-  <!-- Universal Consultation Modal Dialog -->
+    <!-- Universal Consultation Modal Dialog -->
   <div class="modal-backdrop" id="consultation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
     <div class="modal-card">
       <div class="modal-header">
@@ -851,7 +851,11 @@
         <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
       </div>
       <div class="modal-body">
-        <form id="consultation-form" novalidate>
+        <form id="consultation-form" name="consultation-modal" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="consultation-modal">
+          <p style="display: none;" aria-hidden="true">
+            <label>Don’t fill this out if you're human: <input name="bot-field" tabindex="-1"></label>
+          </p>
           <div class="form-group">
             <label for="client-name">Full Name *</label>
             <input type="text" id="client-name" name="client_name" required placeholder="e.g. Ramesh Karki" class="form-control">
@@ -871,16 +875,16 @@
           <div class="form-group">
             <label for="modal-service-select">What do you need help with?</label>
             <select id="modal-service-select" name="service_interest" class="form-control">
-              <option value="local-seo" selected>Local SEO &amp; Google Maps (Jhumka &amp; Eastern Nepal)</option>
               <option value="web-development">New SEO-Optimized Website Development</option>
-              <option value="technical-audit">SEO Audit &amp; Improvements for Existing Site</option>
-              <option value="core-web-vitals">Website Maintenance &amp; Speed Improvements</option>
+              <option value="local-seo">Local SEO & Google Maps (Itahari & Eastern Nepal)</option>
+              <option value="technical-audit">SEO Audit & Improvements for Existing Site</option>
+              <option value="core-web-vitals">Website Maintenance & Speed Improvements</option>
               <option value="ecommerce-seo">E-Commerce Store Optimization</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="client-notes">Tell us about your project in Jhumka</label>
-            <textarea id="client-notes" name="client_notes" rows="3" class="form-control" placeholder="Briefly describe your business in Jhumka and what you would like to achieve..."></textarea>
+            <label for="client-notes">Tell us about your project</label>
+            <textarea id="client-notes" name="client_notes" rows="3" class="form-control" placeholder="Briefly describe your business and what you would like to achieve..."></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">
             Submit Request

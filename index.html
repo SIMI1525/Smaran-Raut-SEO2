@@ -939,7 +939,7 @@
     </section>
   </main>
 
-  <!-- Universal Consultation Modal Dialog -->
+    <!-- Universal Consultation Modal Dialog -->
   <div class="modal-backdrop" id="consultation-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
     <div class="modal-card">
       <div class="modal-header">
@@ -950,7 +950,11 @@
         <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
       </div>
       <div class="modal-body">
-        <form id="consultation-form" novalidate>
+        <form id="consultation-form" name="consultation-modal" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="consultation-modal">
+          <p style="display: none;" aria-hidden="true">
+            <label>Don’t fill this out if you're human: <input name="bot-field" tabindex="-1"></label>
+          </p>
           <div class="form-group">
             <label for="client-name">Full Name *</label>
             <input type="text" id="client-name" name="client_name" required placeholder="e.g. Ramesh Karki" class="form-control">

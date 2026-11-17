@@ -259,7 +259,11 @@
           <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
             Whether you want to discuss a package from our <a href="../services/index.html"><strong>Services Overview</strong></a> or need advice on fixing your existing site's search visibility, send us a message below.
           </p>
-          <form id="contact-page-form">
+          <form id="contact-page-form" name="contact-page" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact-page">
+            <p style="display: none;" aria-hidden="true">
+              <label>Don’t fill this out if you're human: <input name="bot-field" tabindex="-1"></label>
+            </p>
             <div class="form-group">
               <label for="cp-name">Full Name *</label>
               <input type="text" id="cp-name" name="name" required class="form-control" placeholder="Your Name">
