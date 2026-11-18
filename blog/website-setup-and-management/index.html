@@ -65,7 +65,7 @@
   </script>
 </head>
 <body>
-  <header class="site-header">
+    <header class="site-header">
     <div class="container nav-container">
       <a href="../../index.html" class="brand-logo" aria-label="Smaran Raut Home">
         <img src="../../images/logo.png" alt="Smaran Raut Logo" class="brand-logo-img" width="46" height="46">
@@ -76,17 +76,148 @@
       </a>
       <nav class="desktop-nav" aria-label="Main Navigation">
         <a href="../../index.html" class="nav-link">Home</a>
-        <a href="../../services/index.html" class="nav-link">Services</a>
-        <a href="../index.html" class="nav-link active">Knowledge Hub</a>
+        
+        <!-- Services Dropdown -->
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Services <span class="dropdown-arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-header">
+              <span class="dropdown-section-title">Core Services</span>
+            </div>
+            <a href="../../services/index.html" class="dropdown-item featured">
+              <span class="item-title">All Services Overview &rarr;</span>
+              <span class="item-desc">Browse our complete service offering</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="../../services/seo-optimized-web-development/index.html" class="dropdown-item">
+              <span class="item-title">SEO-Optimized Web Development</span>
+              <span class="item-desc">Clean, fast business websites built for search</span>
+            </a>
+            <a href="../../services/local-seo-itahari/index.html" class="dropdown-item">
+              <span class="item-title">Local SEO & Google Maps</span>
+              <span class="item-desc">Rank locally in Itahari, Dharan & Biratnagar</span>
+            </a>
+            <a href="../../services/technical-seo-audit/index.html" class="dropdown-item">
+              <span class="item-title">SEO for Existing Websites</span>
+              <span class="item-desc">Diagnostic audits and search ranking fixes</span>
+            </a>
+            <a href="../../services/core-web-vitals-speed/index.html" class="dropdown-item">
+              <span class="item-title">Website Maintenance & Speed</span>
+              <span class="item-desc">Mobile optimization and ongoing technical care</span>
+            </a>
+            <a href="../../services/ecommerce-seo-nepal/index.html" class="dropdown-item">
+              <span class="item-title">E-Commerce SEO Nepal</span>
+              <span class="item-desc">Product structured data and store visibility</span>
+            </a>
+            <a href="../../services/enterprise-link-building/index.html" class="dropdown-item">
+              <span class="item-title">Ongoing Website Management</span>
+              <span class="item-desc">Monthly search tracking and site management</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Knowledge Hub Dropdown -->
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Knowledge Hub <span class="dropdown-arrow">&#9662;</span>
+          </button>
+          <div class="dropdown-menu">
+            <div class="dropdown-menu-header">
+              <span class="dropdown-section-title">Educational Guides</span>
+            </div>
+            <a href="../index.html" class="dropdown-item featured">
+              <span class="item-title">Knowledge Hub Directory &rarr;</span>
+              <span class="item-desc">Explore all 28 in-depth SEO guides</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="../google-business-profile-optimization-nepal/index.html" class="dropdown-item">
+              <span class="item-title">Google Maps & Local SEO</span>
+              <span class="item-desc">Profile optimization & citations in Nepal</span>
+            </a>
+            <a href="../nextjs-vs-wordpress-for-seo/index.html" class="dropdown-item">
+              <span class="item-title">Web Development & Speed</span>
+              <span class="item-desc">Framework comparisons & mobile performance</span>
+            </a>
+            <a href="../schema-markup-implementation-guide/index.html" class="dropdown-item">
+              <span class="item-title">Technical Audits & Schema</span>
+              <span class="item-desc">Structured data and indexation fixes</span>
+            </a>
+            <a href="../topical-authority-clustering-framework/index.html" class="dropdown-item">
+              <span class="item-title">Content & Link Strategy</span>
+              <span class="item-desc">Topical clusters and natural link acquisition</span>
+            </a>
+          </div>
+        </div>
+
         <a href="../../case-studies/index.html" class="nav-link">Case Studies</a>
         <a href="../../about-us/index.html" class="nav-link">About</a>
         <a href="../../contact-us/index.html" class="nav-link">Contact</a>
       </nav>
       <div class="header-cta-group">
         <button class="btn btn-primary btn-consultation" data-modal="consultation">Book Consultation</button>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open Navigation Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
       </div>
     </div>
   </header>
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation" style="display: none;">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo">
+        <img src="../../images/logo.png" alt="Smaran Raut Logo" class="brand-logo-img" width="40" height="40">
+        <div class="brand-text">
+          <span class="brand-name">Smaran Raut</span>
+          <span class="brand-subtitle">SEO &amp; Web Development</span>
+        </div>
+      </div>
+      <button class="modal-close-btn" id="mobile-menu-close" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="../../index.html">Home</a></li>
+      
+      <!-- Mobile Services Dropdown -->
+      <li class="mobile-dropdown-item">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>Services</span>
+          <span class="mobile-arrow">&#9662;</span>
+        </button>
+        <ul class="mobile-submenu" style="display: none;">
+          <li><a href="../../services/index.html"><strong>Services Overview &rarr;</strong></a></li>
+          <li><a href="../../services/seo-optimized-web-development/index.html">SEO Web Development</a></li>
+          <li><a href="../../services/local-seo-itahari/index.html">Local SEO Itahari & Maps</a></li>
+          <li><a href="../../services/technical-seo-audit/index.html">SEO for Existing Websites</a></li>
+          <li><a href="../../services/core-web-vitals-speed/index.html">Maintenance & Speed</a></li>
+          <li><a href="../../services/ecommerce-seo-nepal/index.html">E-Commerce SEO Nepal</a></li>
+          <li><a href="../../services/enterprise-link-building/index.html">Ongoing Website Management</a></li>
+        </ul>
+      </li>
+
+      <!-- Mobile Knowledge Hub Dropdown -->
+      <li class="mobile-dropdown-item">
+        <button class="mobile-dropdown-toggle" aria-expanded="false">
+          <span>Knowledge Hub</span>
+          <span class="mobile-arrow">&#9662;</span>
+        </button>
+        <ul class="mobile-submenu" style="display: none;">
+          <li><a href="../index.html"><strong>Knowledge Hub Directory &rarr;</strong></a></li>
+          <li><a href="../google-business-profile-optimization-nepal/index.html">Google Maps & Local SEO</a></li>
+          <li><a href="../nextjs-vs-wordpress-for-seo/index.html">Web Development & Speed</a></li>
+          <li><a href="../schema-markup-implementation-guide/index.html">Technical SEO & Schema</a></li>
+          <li><a href="../topical-authority-clustering-framework/index.html">Content & Link Strategy</a></li>
+        </ul>
+      </li>
+
+      <li><a href="../../case-studies/index.html">Case Studies</a></li>
+      <li><a href="../../about-us/index.html">About Smaran Raut</a></li>
+      <li><a href="../../office-location/index.html">Office Location</a></li>
+      <li><a href="../../contact-us/index.html">Contact</a></li>
+    </ul>
+    <div style="padding: 1.5rem 0;">
+      <button class="btn btn-primary btn-consultation" data-modal="consultation" style="width: 100%;">Book Consultation</button>
+    </div>
+  </div>
 
   <main id="main-content">
     <section class="hero-section" style="padding: 2.5rem 0 2rem;">
