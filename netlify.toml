@@ -1,0 +1,34 @@
+[build]
+  publish = "."
+
+# Netlify Permanent 301 Redirects: Enforce https://smaranraut.com.np/
+
+[[redirects]]
+  from = "https://smaran-seo.netlify.app/*"
+  to = "https://smaranraut.com.np/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://smaran-seo.netlify.app/*"
+  to = "https://smaranraut.com.np/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://smaranraut.com.np/*"
+  to = "https://smaranraut.com.np/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.smaranraut.com.np/*"
+  to = "https://smaranraut.com.np/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.smaranraut.com.np/*"
+  to = "https://smaranraut.com.np/:splat"
+  status = 301
+  force = true

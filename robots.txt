@@ -1,4 +1,4 @@
-# Robots.txt for Smaran Raut SEO Consultancy (https://smaran-seo.netlify.app)
+# Robots.txt for Smaran Raut SEO Consultancy (https://smaranraut.com.np)
 User-agent: *
 Allow: /
 
@@ -8,4 +8,4 @@ Disallow: /*?*sort=*
 Disallow: /*?*filter=*
 
 # Sitemap index declaration
-Sitemap: https://smaran-seo.netlify.app/sitemap.xml
+Sitemap: https://smaranraut.com.np/sitemap.xml

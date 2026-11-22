@@ -18,7 +18,7 @@ const SITE_DATA = {
     phone: "+977 9714539838",
     whatsapp: "+977 9714539838",
     email: "contact@smaranraut.com.np",
-    website: "https://smaran-seo.netlify.app",
+    website: "https://smaranraut.com.np",
     address: {
       streetAddress: "Itahari Chowk, middle of Janta Galli",
       addressLocality: "Itahari",

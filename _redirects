@@ -1,0 +1,13 @@
+# Netlify Permanent 301 Redirect Rules
+# Enforce single canonical HTTPS apex domain: https://smaranraut.com.np/
+
+# 1. 301 Redirect previous netlify.app domain to custom domain (preserving paths and query parameters)
+https://smaran-seo.netlify.app/*  https://smaranraut.com.np/:splat  301!
+http://smaran-seo.netlify.app/*   https://smaranraut.com.np/:splat  301!
+
+# 2. 301 Redirect HTTP to HTTPS on custom domain
+http://smaranraut.com.np/*        https://smaranraut.com.np/:splat  301!
+
+# 3. 301 Redirect WWW to non-WWW apex domain
+https://www.smaranraut.com.np/*   https://smaranraut.com.np/:splat  301!
+http://www.smaranraut.com.np/*    https://smaranraut.com.np/:splat  301!
