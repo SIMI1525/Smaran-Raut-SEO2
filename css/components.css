@@ -2188,3 +2188,42 @@ input[type="range"]::-moz-range-thumb {
     align-items: center;
   }
 }
+
+
+/* WhatsApp CTA Button */
+.btn-whatsapp {
+  background-color: #25D366;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  border: 1px solid #20BA5A;
+  border-radius: var(--radius-sm, 6px);
+  padding: 0.6rem 1.15rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 4px rgba(37, 211, 102, 0.2);
+  line-height: 1.25;
+}
+.btn-whatsapp:hover,
+.btn-whatsapp:focus-visible {
+  background-color: #1EBE5D;
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(37, 211, 102, 0.35);
+}
+.btn-whatsapp svg {
+  flex-shrink: 0;
+  fill: currentColor;
+}
+@media (max-width: 640px) {
+  .header-cta-group .btn-whatsapp-text {
+    display: none;
+  }
+  .header-cta-group .btn-whatsapp {
+    padding: 0.55rem;
+  }
+}
