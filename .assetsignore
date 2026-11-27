@@ -1,0 +1,7 @@
+scripts/
+*.bat
+*.ps1
+test.json
+test.txt
+verify.py
+server.py

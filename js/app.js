@@ -280,7 +280,7 @@
     }
   });
 
-  // Universal Form Validation & Submission Interceptor (Netlify Forms AJAX integration)
+  // Universal Form Validation & Submission Interceptor (Cloudflare Pages Function /api/submit & D1 integration)
   document.addEventListener('submit', function (e) {
     const form = e.target;
     if (!form || !form.matches('form')) return;
@@ -304,39 +304,60 @@
       submitBtn.textContent = 'Submitting...';
     }
 
-    // Build URL-encoded form data according to Netlify Forms specifications
+    // Build structured payload for /api/submit
     const formData = new FormData(form);
-    if (!formData.has('form-name')) {
-      const formName = form.getAttribute('name') || form.id;
-      formData.append('form-name', formName);
+    const payload = {};
+    for (const [key, value] of formData.entries()) {
+      payload[key] = typeof value === 'string' ? value.trim() : value;
     }
-    const body = new URLSearchParams(formData).toString();
-    const postEndpoint = form.getAttribute('action') || '/';
+
+    // Ensure form identifier is explicitly present
+    if (!payload['form-name'] && !payload['form_type']) {
+      const formName = form.getAttribute('name') || form.id || 'consultation-modal';
+      payload['form-name'] = formName;
+    }
+
+    // Attach originating page URL
+    payload['page_url'] = window.location.href;
+
+    const postEndpoint = (form.getAttribute('action') && form.getAttribute('action') !== '/')
+      ? form.getAttribute('action')
+      : '/api/submit';
 
     fetch(postEndpoint, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: body
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload)
     })
     .then(function (response) {
-      if (response.ok) {
-        window.showToast(`Thank you, ${clientName}! Your inquiry has been securely dispatched to Smaran Raut. We will contact you within 24 business hours.`, "success");
-        form.reset();
-        closeModal();
-      } else {
-        throw new Error('Server returned status ' + response.status);
-      }
+      return response.json().then(function (data) {
+        if (response.ok && data.success) {
+          const successMsg = data.message || `Thank you, ${clientName}! Your inquiry has been securely received by Smaran Raut. We will contact you within 24 business hours.`;
+          window.showToast(successMsg, "success");
+          form.reset();
+          closeModal();
+        } else {
+          const errorMsg = (data && data.error) ? data.error : ("Server returned status " + response.status);
+          throw new Error(errorMsg);
+        }
+      });
     })
     .catch(function (error) {
       console.warn('Form submission notice:', error);
-      // In local environments (file:// or python static server without Netlify endpoints),
-      // inform user gracefully that validation passed; in production, show contact fallback.
+      // In local static development (file:// or python static server without Pages Functions),
+      // inform developer gracefully that validation passed; in production, show exact server error or fallback.
       if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:') {
-        window.showToast(`[Local Preview] Thank you, ${clientName}! Form validated. (On Netlify production, this is received by Netlify Forms).`, "success");
+        window.showToast(`[Local Preview] Thank you, ${clientName}! Form validated. (On Cloudflare Pages production, this saves to D1 and dispatches email).`, "success");
         form.reset();
         closeModal();
       } else {
-        window.showToast("There was an issue dispatching your request online. Please contact us directly at +977 9714539838 or contact@smaranraut.com.np.", "error");
+        const userNotice = (error && error.message && !error.message.includes('fetch'))
+          ? error.message
+          : "There was an issue dispatching your request online. Please contact us directly at +977 9714539838 or contact@smaranraut.com.np.";
+        window.showToast(userNotice, "error");
       }
     })
     .finally(function () {

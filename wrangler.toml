@@ -1,0 +1,13 @@
+name = "smaran-raut"
+pages_build_output_dir = "."
+compatibility_date = "2026-11-26"
+
+[[d1_databases]]
+binding = "FORM_DB"
+database_name = "website_form_submissions"
+database_id = "f1ac3a6f-364c-49ff-b888-4b18cd7a09c0"
+
+[vars]
+CLOUDFLARE_ACCOUNT_ID = "85f591f6a7975bcf428709ad916955c1"
+FORMS_TO_EMAIL = "playzswifty05@gmail.com"
+FORMS_FROM_EMAIL = "contact@smaranraut.com.np"
