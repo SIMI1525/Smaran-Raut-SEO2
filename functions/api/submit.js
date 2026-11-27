@@ -77,7 +77,8 @@ export async function onRequestGet(context) {
       }
     }
 
-    const emailConfigured = Boolean(context.env && context.env.CLOUDFLARE_EMAIL_API_TOKEN);
+    const emailToken = (context.env && (context.env.CLOUDFLARE_EMAIL_API_TOKEN || context.env['CLOUDFLARE_EMAIL_API_TOKEN '])) || '';
+    const emailConfigured = Boolean(emailToken && emailToken.trim().length > 5);
 
     return new Response(JSON.stringify({
       status: 'ready',
@@ -359,7 +360,7 @@ export async function onRequestPost(context) {
   // 9. Step 2: Attempt Email Notification via Cloudflare Email Sending REST API
   // Configuration lookup
   const accountId = (env.CLOUDFLARE_ACCOUNT_ID || '85f591f6a7975bcf428709ad916955c1').trim();
-  const emailApiToken = (env.CLOUDFLARE_EMAIL_API_TOKEN || '').trim();
+  const emailApiToken = (env.CLOUDFLARE_EMAIL_API_TOKEN || env['CLOUDFLARE_EMAIL_API_TOKEN '] || '').trim();
   const toEmail = (env.FORMS_TO_EMAIL || 'playzswifty05@gmail.com').trim();
   const fromEmail = (env.FORMS_FROM_EMAIL || 'contact@smaranraut.com.np').trim();
 
@@ -467,17 +468,11 @@ Saved in Cloudflare D1 Database (ID: ${submissionId})
       const emailEndpoint = `https://api.cloudflare.com/client/v4/accounts/${accountId}/email/sending/send`;
       
       const emailPayload = {
-        to: [toEmail],
-        from: {
-          address: fromEmail,
-          name: "Smaran Raut Portfolio"
-        },
-        reply_to: email,
+        to: toEmail,
+        from: fromEmail,
         subject: emailSubject,
-        content: [
-          { type: "text/plain", value: plainTextContent },
-          { type: "text/html", value: htmlContent }
-        ]
+        text: plainTextContent,
+        html: htmlContent
       };
 
       const emailResponse = await fetch(emailEndpoint, {
