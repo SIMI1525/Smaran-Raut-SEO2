@@ -293,7 +293,7 @@
         <button class="modal-close-btn" aria-label="Close dialog">&times;</button>
       </div>
       <div class="modal-body">
-        <form id="consultation-form" name="consultation-modal" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <form id="consultation-form" action="/api/submit" name="consultation-modal" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
           <input type="hidden" name="form-name" value="consultation-modal">
           <p style="display: none;" aria-hidden="true">
             <label>Don’t fill this out if you're human: <input name="bot-field" tabindex="-1"></label>

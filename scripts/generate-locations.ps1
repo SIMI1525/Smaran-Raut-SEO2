@@ -493,7 +493,7 @@ foreach ($city in $cities) {
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <polyline points="20 6 9 17 4 12"></polyline>
                 </svg>
-                SEO &amp; Web Development &middot; Serving $cName, $cDist
+                SEO Optimization &middot; Serving $cName, $cDist
               </span>
             </div>
 

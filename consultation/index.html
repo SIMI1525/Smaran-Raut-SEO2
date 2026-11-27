@@ -264,7 +264,7 @@
           <h2 style="font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--primary-dark);">Reserve Your Consultation</h2>
           <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.75rem;">Fill out the details below and we will contact you within 24 business hours to confirm your session.</p>
 
-          <form id="standalone-consultation-form" name="consultation-page" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <form id="standalone-consultation-form" action="/api/submit" name="consultation-page" method="POST" data-netlify="true" netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="consultation-page">
             <p style="display: none;" aria-hidden="true">
               <label>Don’t fill this out if you're human: <input name="bot-field" tabindex="-1"></label>
